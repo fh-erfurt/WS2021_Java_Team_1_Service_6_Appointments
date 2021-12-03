@@ -1,13 +1,13 @@
 import java.util.Date;
 
 public class appointment {
-    int id;
-    String name;
-    String creator;
-    Date date;
-    campus campuslocation;
-    String room;
-    String description;
+   private int id;
+   private String name;
+   private String creator;
+   private Date date;
+   private campus campuslocation;
+   private String room;
+   private String description;
     //int numberParticipants;
 
     public void setId(int id) {
@@ -55,12 +55,15 @@ public class appointment {
     }
 
 
-
-
-
-
-
-
-
+    public appointment(){}
+    public appointment(int a_id, String a_name, String a_creator, Date a_date, campus a_campuslocation, String a_room, String a_description){
+        this.id = a_id;
+        this.name = a_name;
+        this.creator = a_creator;
+        this.date = a_date;
+        this.campuslocation =a_campuslocation;
+        this.room = a_room;
+        this.description = a_description;
+    }
 }
 
