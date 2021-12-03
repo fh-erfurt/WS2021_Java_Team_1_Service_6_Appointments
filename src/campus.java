@@ -1,0 +1,6 @@
+public enum campus {
+    ONLINE,
+    ALTONAERCAMPUS,
+    LEIPZIGERCAMPUS,
+    SCHLUETERCAMPUS
+}
