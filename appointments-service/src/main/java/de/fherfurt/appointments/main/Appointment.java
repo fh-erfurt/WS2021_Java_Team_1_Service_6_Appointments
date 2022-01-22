@@ -1,11 +1,15 @@
-import java.util.Date;
+package  de.fherfurt.appointments.main;
 
-public class appointment {
+
+import java.time.LocalDateTime;
+
+public class Appointment {
    private int id;
    private String name;
    private String creator;
-   private Date date;
-   private campus campuslocation;
+   private LocalDateTime date;
+   private Repetition repetition;
+   private Campus campusLocation;
    private String room;
    private String description;
     //int numberParticipants;
@@ -19,11 +23,14 @@ public class appointment {
     public void setCreator(String creator) {
         this.creator = creator;
     }
-    public void setDate(Date date) {
+    public void setDate(LocalDateTime date) {
         this.date = date;
     }
-    public void setCampuslocation(campus campuslocation) {
-        this.campuslocation = campuslocation;
+    public void setCampusLocation(Campus campusLocation) {
+       this.campusLocation = campusLocation;
+    }
+    public void setRepetition(Repetition repetition) {
+        this.repetition = repetition;
     }
     public void setRoom(String room) {
         this.room = room;
@@ -41,12 +48,13 @@ public class appointment {
     public String getCreator() {
         return creator;
     }
-    public Date getDate() {
+    public LocalDateTime getDate() {
         return date;
     }
-    public campus getCampuslocation() {
-        return campuslocation;
+    public Campus getCampusLocation() {
+        return campusLocation;
     }
+    public Repetition getRepetition() {return repetition;}
     public String getRoom() {
         return room;
     }
@@ -55,15 +63,10 @@ public class appointment {
     }
 
 
-    public appointment(){}
-    public appointment(int a_id, String a_name, String a_creator, Date a_date, campus a_campuslocation, String a_room, String a_description){
-        this.id = a_id;
-        this.name = a_name;
-        this.creator = a_creator;
-        this.date = a_date;
-        this.campuslocation =a_campuslocation;
-        this.room = a_room;
-        this.description = a_description;
+    public Appointment(){}
+    public Appointment(LocalDateTime dateInput){
+        this.date = dateInput;
     }
+
 }
 
