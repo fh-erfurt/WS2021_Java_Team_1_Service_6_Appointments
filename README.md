@@ -1,4 +1,4 @@
-# WS2021_Java_Team_1_Appointments_6
+# WS2021_Java_Team_1_Service_6_Appointments
 
 
 # Java1 Project
