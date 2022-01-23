@@ -1,4 +1,4 @@
-package  de.fherfurt.appointments.main;
+package de.fherfurt.appointments.main;
 
 
 import java.time.LocalDateTime;
