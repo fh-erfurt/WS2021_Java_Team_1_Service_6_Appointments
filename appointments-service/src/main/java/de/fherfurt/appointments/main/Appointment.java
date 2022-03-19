@@ -66,30 +66,30 @@ public class Appointment {
     }
 
     public int getId() {
-        return this.id;                     // bei allen gettern , wegen der clean code für interne Variablen
+        return this.id;
     }
     public String getName() {
-        return name;
+        return this.name;
     }
     public Creator getCreator() {
-        return creator;
+        return this.creator;
     }
     public LocalDateTime getDate() {
-        return date;
+        return this.date;
     }
     public Campus getCampusLocation() {
-        return campusLocation;
+        return this.campusLocation;
     }
     public Repetition getRepetition() {return repetition;}
     public String getRoom() {
-        return room;
+        return this.room;
     }
     public String getDescription() {
-        return description;
+        return this.description;
     }
 
     public List<Student> getParticipants() {
-        return participants;
+        return this.participants;
     }
 
     public Appointment(){}

@@ -16,7 +16,7 @@
 * Artur Jadranski
 
 <details closed>
-<summary><font size = 5><b>Anforderungsbeschreibung</b></font></summary>
+<summary><span style="font-size: large; "><b>Anforderungsbeschreibung</b></span></summary>
 <br>
 
 ### Geplant ist eine Terminplan zum Anzeigen/Erstellen/Bearbeiten von Terminen.
@@ -44,7 +44,7 @@
 ![UseCase-Diagramm](muss noch included werden)
 
 ### Klassendiagramm FlyAway
-![UML Diaramm](https://user-images.githubusercontent.com/73827527/106396009-a7eeef00-6405-11eb-8199-62c321e5c20e.jpg)
+![UML Diagramme](https://user-images.githubusercontent.com/73827527/106396009-a7eeef00-6405-11eb-8199-62c321e5c20e.jpg)
 
 
 
