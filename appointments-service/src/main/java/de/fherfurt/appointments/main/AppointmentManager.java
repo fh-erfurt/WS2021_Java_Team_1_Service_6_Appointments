@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 import java.util.HashMap;
 
 /**
- * @param registerStudent
+ * //@param registerStudent
  */
 
 /*
@@ -39,3 +39,5 @@ public class AppointmentManager {
 
 
 }
+
+
