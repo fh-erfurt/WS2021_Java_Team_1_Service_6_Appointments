@@ -4,11 +4,24 @@ import de.fherfurt.appointments.main.Appointment;
 
 public class Professor extends Creator {
 
+    /**
+     * the class from professor inheritance from class creator
+     * @param name
+     * @param mtrkNr
+     * @author stephan teichmueller
+     */
 
     public Professor(String name, String mtrkNr) {
         super(name,mtrkNr);
 
     }
+
+    /**
+     * inform all students, if the appointment was closed
+     * @param appointment current appointment
+     * @param message for information to all participants
+     * @author stephan teichmueller
+     */
     public void informStudents(Appointment appointment, String message){
         if (!getTermine().contains(appointment)){
             return;
