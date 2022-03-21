@@ -2,10 +2,11 @@ package de.fherfurt.appointments.main;
 
 import de.fherfurt.appointments.models.Professor;
 import de.fherfurt.appointments.models.Student;
+import de.fherfurt.appointments.searching.FindBy;
 
 import java.time.LocalDateTime;
-import java.util.Calendar;
-import java.util.Date;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args){
@@ -23,6 +24,7 @@ public class Main {
 
         LocalDateTime date  = null;
         Appointment test = prof1.createAppointment("THI", date, Repetition.DAILY, Campus.ALTONAERCAMPUS, "Hallo", "Test");
+        Appointment test2 = prof1.createAppointment("MA", date, Repetition.DAILY, Campus.ALTONAERCAMPUS, "TestTEST HALLO", "Test");
 
         //Händisch -> wird vom Manager übernommen.
         student1.addAppointment(test);
@@ -37,5 +39,18 @@ public class Main {
 
         prof1.informStudents(test, "Der Test morgen fällt aus.");
 
+        List<Appointment> appointmentList = new ArrayList<>();
+
+        appointmentList.add(test);
+        appointmentList.add(test2);
+
+
+        FindBy filter = new FindBy(appointmentList);
+
+        System.out.println(filter.FindByName(appointmentList, "THI"));
+        System.out.println(test.getId());
+
     }
+
+
 }
