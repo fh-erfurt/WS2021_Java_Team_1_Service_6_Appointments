@@ -3,8 +3,8 @@ package de.fherfurt.appointments.main;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppointmentManagerTest {
-
-    @org.junit.jupiter.api.Test
+/*
+    @org.junit.jupiter.api.Test --> addParticipant und addAppointment werden Sepperat getestet
     void registerStudent() {
         //given
 
@@ -13,7 +13,7 @@ class AppointmentManagerTest {
         //then
     }
 
-    @org.junit.jupiter.api.Test
+    @org.junit.jupiter.api.Test--> unsignedParticipant und delAppointment werden Sepperat getestet
     void unsignedStudent() {
         //given
 
@@ -23,7 +23,7 @@ class AppointmentManagerTest {
 
     }
 
-    @org.junit.jupiter.api.Test
+    @org.junit.jupiter.api.Test --> addAppointment wird Sepperat getestet
     void registerProfessor() {
         //given
 
@@ -32,7 +32,7 @@ class AppointmentManagerTest {
         //then
     }
 
-    @org.junit.jupiter.api.Test
+    @org.junit.jupiter.api.Test--> delAppointment wird Sepperat getestet
     void unsignedProfessor() {
         //given
 
@@ -41,7 +41,7 @@ class AppointmentManagerTest {
         //then
     }
 
-    @org.junit.jupiter.api.Test
+    @org.junit.jupiter.api.Test--> leere funktion
     void delAppointment() {
         //given
 
@@ -58,4 +58,6 @@ class AppointmentManagerTest {
 
         //then
     }
+
+ */
 }
