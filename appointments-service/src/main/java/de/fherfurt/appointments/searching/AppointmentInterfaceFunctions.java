@@ -5,7 +5,7 @@ import de.fherfurt.appointments.client.transfer.objects.NewsAppointment;
 
 import java.util.Optional;
 
-public class Appointments implements AppointmentsClient {
+public class AppointmentInterfaceFunctions implements AppointmentsClient {
 
 
     @Override
