@@ -1,5 +1,6 @@
 package de.fherfurt.appointments.main;
 
+import de.fherfurt.appointments.mapper.AppointmentMapper;
 import de.fherfurt.appointments.models.Professor;
 import de.fherfurt.appointments.models.Student;
 import de.fherfurt.appointments.searching.FindBy;
@@ -22,7 +23,7 @@ public class Main {
         Student student5 = new Student("Lukas", nr);
         Student student6 = new Student("Fridolin", nr);
 
-        LocalDateTime date  = null;
+        LocalDateTime date = LocalDateTime.now();
         Appointment test = prof1.createAppointment("THI", date, Repetition.DAILY, Campus.ALTONAERCAMPUS, "Hallo", "Test");
         Appointment test2 = prof1.createAppointment("MA", date, Repetition.DAILY, Campus.ALTONAERCAMPUS, "TestTEST HALLO", "Test");
 
@@ -47,8 +48,16 @@ public class Main {
 
         FindBy filter = new FindBy(appointmentList);
 
-        System.out.println(filter.FindByName(appointmentList, "THI"));
-        System.out.println(test.getId());
+        LocalDateTime testDate = LocalDateTime.of(1,1,1,1,1);
+
+        System.out.println(filter.FindByName("0"));
+        System.out.println(test.getName() + " " + test.getDate());
+        System.out.println(filter.FindByCreator(prof1));
+        System.out.println(filter.FindByDate(testDate));
+
+        AppointmentMapper mapper = new AppointmentMapper();
+
+        System.out.println(mapper.NewsAppointmentMapper(test).getPlace());
 
     }
 
