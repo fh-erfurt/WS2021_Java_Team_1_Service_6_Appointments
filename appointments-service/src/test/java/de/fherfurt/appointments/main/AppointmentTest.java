@@ -19,7 +19,8 @@ class AppointmentTest {
     LocalDateTime TestTime = LocalDateTime.now();
     @Test
     /**
-     * add some Participants
+     * test to add some Participants
+     * @author nadine hütter
      */
     void TestaddParticipant() {
         //given
@@ -31,6 +32,11 @@ class AppointmentTest {
         //then
         Assertions.assertEquals(TestAppointment.getParticipants(), Arrays.asList(RandomName));
     }
+
+    /**
+     * test that the student is signed in  the appointment
+     * @author nadine hütter
+     */
 
     @Test
     void TestunsignedParticipant_Participantissigned() {
@@ -45,6 +51,11 @@ class AppointmentTest {
         //then
         Assertions.assertEquals(TestAppointment.getParticipants(), Arrays.asList(RandomName));
     }
+
+    /**
+     * test if the student is unsigned in the appointment
+     * @author nadine hütter
+     */
 
     @Test
     void TestunsignedParticipant_ParticipantisNOTsigned() {

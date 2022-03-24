@@ -1,6 +1,8 @@
 package de.fherfurt.appointments.main;
 
-
+/**
+ * @author nadine hütter
+ */
 
 class AppointmentManagerTest {
 /*

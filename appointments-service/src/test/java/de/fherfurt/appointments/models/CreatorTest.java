@@ -15,9 +15,17 @@ import java.util.Arrays;
 
 
 class CreatorTest {
+    /**
+     * some variables
+     */
 
     LocalDateTime TestTime = LocalDateTime.now();
     Professor TestProfessor = new Professor("Test","12345");
+
+    /**
+     * test to add one appointment
+     * @author nadine hütter
+     */
     @Test
     void TestaddONEAppointment() {
         //given
@@ -28,6 +36,11 @@ class CreatorTest {
         //then
         Assertions.assertEquals(RandomName.getTermine(), Arrays.asList(TestAppointment);
     }
+
+    /**
+     * test to add some appointments
+     * @author nadine hütter
+     */
     @Test
     void TestaddSEVERALAppointments() {
         //given
@@ -40,6 +53,11 @@ class CreatorTest {
         //then
         Assertions.assertEquals(RandomName.getTermine(), Arrays.asList(TestAppointment1,TestAppointment2,TestAppointment3));
     }
+
+    /**
+     * test to delete one appointment
+     * @author nadine hütter
+     */
 
     @Test
     void TestdelONEAppointment() {
@@ -54,6 +72,11 @@ class CreatorTest {
         Assertions.assertEquals(RandomName.getTermine(), Arrays.asList(TestAppointment2));
 
     }
+
+    /**
+     * test to delete some appointment if one of this appointment is unsigned
+     * @author nadine hütter
+     */
     @Test
     void TestdelSEVERALAppointments_OneAppointmentunsigned() {
         //given
@@ -68,6 +91,11 @@ class CreatorTest {
         Assertions.assertEquals(RandomName.getTermine(), Arrays.asList(TestAppointment3));
 
     }
+
+    /**
+     * test to delete some  signed appointments
+     * @author nadine hütter
+     */
     @Test
     void TestdelSEVERALAppointments_ALLsigned () {
         //given
@@ -83,6 +111,10 @@ class CreatorTest {
         Assertions.assertEquals(RandomName.getTermine(), Arrays.asList(TestAppointment4));
     }
 
+    /**
+     * test to equals the input with the return appointment
+     * @author nadine hütter
+     */
 
     @Test
     void TestcreateAppointment_return() { //--> addApointment muss nicht getestet werden da es bereits getestet wurde

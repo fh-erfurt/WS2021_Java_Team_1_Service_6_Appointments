@@ -12,7 +12,10 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.time.LocalDateTime;
 
-
+/**
+ * test to inform the students if the appointment was closed
+ * @author nadine hütter
+ */
 
 class ProfessorTest {
     //redirecting the system out
