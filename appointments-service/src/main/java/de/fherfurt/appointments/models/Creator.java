@@ -43,11 +43,15 @@ import java.util.List;
          * @author stephan teichmueller
          */
 
-        public void delAppointment(Appointment... appointments){
-            if (!this.termine.containsAll(List.of(appointments))) {
-                return;
+        public void delAppointment(Appointment... appointments){ // brricht bei ersten nicht eingetragenen Termin ab und berücksichtigt die anderen gar nicht
+            for (Appointment appointment:appointments) {
+
+                    this.termine.remove(appointment);
+
+
+
             }
-            this.termine.removeAll(List.of(appointments));
+
 
         }
 

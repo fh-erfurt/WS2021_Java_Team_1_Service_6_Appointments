@@ -27,9 +27,6 @@ public class Main {
         LocalDateTime date  = null;
         Appointment test = prof1.createAppointment("THI", date, Repetition.DAILY, Campus.ALTONAERCAMPUS, "Hallo", "Test");
 
-        //Händisch -> wird vom Manager übernommen.
-        student1.addAppointment(test);
-        test.addParticipant(student1);
 
         //Manager
         AppointmentManager.registerStudent(test, student1);
