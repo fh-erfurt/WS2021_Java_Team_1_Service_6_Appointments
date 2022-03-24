@@ -33,6 +33,7 @@ import java.util.List;
 
 
         public void addAppointment(Appointment... appointments){
+
             this.termine.addAll(List.of(appointments));
         }
 
