@@ -5,8 +5,12 @@ import de.fherfurt.person.client.transfer.objects.AppointmentPerson;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * Interface of Person Client with given functionalities
+ *
+ * @author Jonas Helmboldt
+ */
 public interface PersonClient {
-    Optional<AppointmentPerson> findById(int id);
     Optional<AppointmentPerson> findByEmail(String email);
     List<AppointmentPerson> findByName(String name);
 }

@@ -5,6 +5,12 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * relevant person information for the appointment service
+ * TODO replace with the current models to use the {@link AppointmentPerson} instead
+ *
+ * @author Jonas Helmboldt
+ */
 @NoArgsConstructor
 @AllArgsConstructor
 @Setter
