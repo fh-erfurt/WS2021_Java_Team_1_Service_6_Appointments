@@ -22,7 +22,7 @@ class AppointmentTest {
         //when
             TestAppointment.addParticipant(RandomName);
         //then
-            Assertions.assertEquals(TestAppointment.getParticipants(), Arrays.asList("RandomName"));
+            Assertions.assertEquals(TestAppointment.getParticipants(), Arrays.asList(RandomName));
     }
 
     @Test
@@ -36,7 +36,7 @@ class AppointmentTest {
         //when
         TestAppointment.unsignedParticipant(Studenttounsign);
         //then
-        Assertions.assertEquals(TestAppointment.getParticipants(), Arrays.asList("RandomName"));
+        Assertions.assertEquals(TestAppointment.getParticipants(), Arrays.asList(RandomName));
     }
 
     @Test
@@ -49,7 +49,7 @@ class AppointmentTest {
         //when
         TestAppointment.unsignedParticipant(Studenttounsign);
         //then
-        Assertions.assertEquals(TestAppointment.getParticipants(), Arrays.asList("RandomName"));
+        Assertions.assertEquals(TestAppointment.getParticipants(), Arrays.asList(RandomName));
     }
 
     /*@Test --> nicht benötigt weil delAppointmentwird getestet(funktion ruft nur delAppointment auf

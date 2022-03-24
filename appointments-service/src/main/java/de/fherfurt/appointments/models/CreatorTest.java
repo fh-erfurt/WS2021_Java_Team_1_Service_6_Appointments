@@ -26,7 +26,7 @@ class CreatorTest {
         //when
         RandomName.addAppointment(TestAppointment);
         //then
-        Assertions.assertEquals(RandomName.getTermine(), Arrays.asList("TestAppointment"));
+        Assertions.assertEquals(RandomName.getTermine(), Arrays.asList(TestAppointment));
     }
     @Test
     void TestaddSEVERALAppointments() {
@@ -38,7 +38,7 @@ class CreatorTest {
         //when
         RandomName.addAppointment(TestAppointment1,TestAppointment2,TestAppointment3);
         //then
-        Assertions.assertEquals(RandomName.getTermine(), Arrays.asList("TestAppointment1","TestAppointment2","TestAppointment3"));
+        Assertions.assertEquals(RandomName.getTermine(), Arrays.asList(TestAppointment1,TestAppointment2,TestAppointment3));
     }
 
     @Test
@@ -51,7 +51,7 @@ class CreatorTest {
         //when
         RandomName.delAppointment(TestAppointment1);
         //then
-        Assertions.assertEquals(RandomName.getTermine(), Arrays.asList("TestAppointment2"));
+        Assertions.assertEquals(RandomName.getTermine(), Arrays.asList(TestAppointment2));
 
     }
     @Test
@@ -65,7 +65,7 @@ class CreatorTest {
         //when
         RandomName.delAppointment(TestAppointment1,TestAppointment2);
         //then
-        Assertions.assertEquals(RandomName.getTermine(), Arrays.asList("TestAppointment1","TestAppointment3"));
+        Assertions.assertEquals(RandomName.getTermine(), Arrays.asList(TestAppointment1,TestAppointment3));
 
     }
     @Test
@@ -80,7 +80,7 @@ class CreatorTest {
         //when
         RandomName.delAppointment(TestAppointment1,TestAppointment2,TestAppointment3);
         //then
-        Assertions.assertEquals(RandomName.getTermine(), Arrays.asList("TestAppointment4"));
+        Assertions.assertEquals(RandomName.getTermine(), Arrays.asList(TestAppointment4));
     }
 
 

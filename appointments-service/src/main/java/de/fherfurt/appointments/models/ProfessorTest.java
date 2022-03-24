@@ -9,6 +9,7 @@ class ProfessorTest {
     @Test
     void informStudents() {
         //given
+
         //when
         //then
     }

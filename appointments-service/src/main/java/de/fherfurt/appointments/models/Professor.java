@@ -26,7 +26,7 @@ public class Professor extends Creator {
         if (!getTermine().contains(appointment)){
             return;
         }
-        Appointment found = null;
+        //Appointment found = null;
 
         for (Appointment termin:getTermine()) {
             if (termin.equals(appointment)){
