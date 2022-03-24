@@ -3,6 +3,7 @@ package de.fherfurt.appointments.main;
 import de.fherfurt.appointments.mapper.AppointmentMapper;
 import de.fherfurt.appointments.models.Professor;
 import de.fherfurt.appointments.models.Student;
+import de.fherfurt.appointments.searching.AppointmentInterfaceFunctions;
 import de.fherfurt.appointments.searching.FindBy;
 import de.fherfurt.appointments.sorting.SortBy;
 
@@ -69,6 +70,7 @@ public class Main {
         System.out.println(test.getName() + " " + test.getDate());
         System.out.println(filter.FindByCreator(prof1));
         System.out.println(filter.FindByDate(testDate));
+        System.out.println(filter.FindById(0));
 
         filter.FindByName("THI");
 
@@ -78,10 +80,12 @@ public class Main {
 
         SortBy sorting = new SortBy(appointmentList);
 
+        AppointmentInterfaceFunctions interfaceFunctions = new AppointmentInterfaceFunctions(appointmentList);
 
-        printList(appointmentList);
+        System.out.println(interfaceFunctions.getAppointmentById(1));
+        System.out.println(interfaceFunctions.getAppointmentByName("Aff"));
+        System.out.println(filter.FindByName("AFF"));
 
-        printList(sorting.SortByCampus());
 
 
     }

@@ -5,6 +5,13 @@ import de.fherfurt.appointments.main.Appointment;
 
 public class AppointmentMapper {
 
+    /**
+     * Mapper that converts a {@link Appointment} to {@link NewsAppointment}
+     *
+     * @param inputAppointment {@link Appointment} which should be converted
+     * @return finished {@link NewsAppointment}
+     * @author Jonas Helmboldt
+     */
     public NewsAppointment NewsAppointmentMapper (Appointment inputAppointment){
 
         NewsAppointment newsAppointmentDto = new NewsAppointment();

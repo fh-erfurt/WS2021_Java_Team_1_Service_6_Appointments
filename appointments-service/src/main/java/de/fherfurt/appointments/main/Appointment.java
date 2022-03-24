@@ -4,11 +4,13 @@ package de.fherfurt.appointments.main;
 import de.fherfurt.appointments.models.Creator;
 import de.fherfurt.appointments.models.Professor;
 import de.fherfurt.appointments.models.Student;
+import lombok.AllArgsConstructor;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+@AllArgsConstructor
 public class Appointment {
    private int id;
    private String name;
@@ -98,6 +100,17 @@ public class Appointment {
     }
 
     public Appointment(String name, Creator creator, LocalDateTime date, Repetition repetition, Campus campusLocation, String room, String description) {
+        this.name = name;
+        this.creator = creator;
+        this.date = date;
+        this.repetition = repetition;
+        this.campusLocation = campusLocation;
+        this.room = room;
+        this.description = description;
+    }
+
+    public Appointment(int id, String name, Creator creator, LocalDateTime date, Repetition repetition, Campus campusLocation, String room, String description) {
+        this.id = id;
         this.name = name;
         this.creator = creator;
         this.date = date;
