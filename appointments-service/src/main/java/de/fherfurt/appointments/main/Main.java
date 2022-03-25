@@ -13,6 +13,9 @@ import java.util.stream.Collectors;
 
 
 
+/**
+ *
+ */
 public class Main {
 
 
@@ -38,9 +41,6 @@ public class Main {
         Appointment test4 = prof3.createAppointment("MA", date2, Repetition.DAILY, Campus.ALTONAERCAMPUS, "TestTEST HALLO", "Test");
         Appointment test5 = prof2.createAppointment("MA", date2, Repetition.DAILY, Campus.ALTONAERCAMPUS, "TestTEST HALLO", "Test");
 
-        //Händisch -> wird vom Manager übernommen.
-        student1.addAppointment(test);
-        test.addParticipant(student1);
 
         //Manager
         AppointmentManager.registerStudent(test, student1);

@@ -1,5 +1,6 @@
 package de.fherfurt.appointments.models;
 
+
 import de.fherfurt.appointments.main.Appointment;
 import de.fherfurt.appointments.main.Campus;
 import de.fherfurt.appointments.main.Repetition;
@@ -8,45 +9,98 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Creator {
-    private String name;
-    private String mtrkNr;
-    private List<Appointment> termine = new ArrayList<>();
+    public class Creator {
+        private final String name;
+        private final String mTrkNr;
+        private List<Appointment> termine = new ArrayList<>();
 
-    public Creator(String name, String mtrkNr) {
-        this.name = name;
-        this.mtrkNr = mtrkNr;
-    }
-
-
-    public void addAppointment(Appointment... appointments){
-        this.termine.addAll(List.of(appointments));
-    }
-
-    public void delAppointment(Appointment... appointments){
-        if (!this.termine.containsAll(List.of(appointments))) {
-            return;
+        /**
+         * constructor of creator
+         * @param name name of the creator
+         * @param mTrkNr matrikelnumber of the creator
+         * @author stephan teichmueller
+         */
+        public Creator(String name, String mTrkNr) {
+            this.name = name;
+            this.mTrkNr = mTrkNr;
         }
-        this.termine.removeAll(List.of(appointments));
 
-    }
+        /**
+         * add appointments
+         * @param appointments
+         * @author stephan teichmueller
+         */
 
-    public List<Appointment> getTermine() {
-        return termine;
-    }
 
-    public String getName() {
-        return name;
-    }
+        public void addAppointment(Appointment... appointments){
 
-    public String getMtrkNr() {
-        return mtrkNr;
-    }
+            this.termine.addAll(List.of(appointments));
+        }
 
-    public Appointment createAppointment(String name, LocalDateTime date, Repetition repetition, Campus campusLocation, String room, String description){
-        Appointment appointment = new Appointment(name,this,date,repetition,campusLocation,room,description);
-        addAppointment(appointment);
-        return appointment;
+        /**
+         * delete appointments
+         * @param appointments
+         * @author stephan teichmueller
+         */
+
+        public void delAppointment(Appointment... appointments){
+            for (Appointment appointment:appointments) {
+
+                    this.termine.remove(appointment);
+
+
+
+            }
+
+
+        }
+
+        /**
+         * search for termine of an appointment
+         * @return the date(termine) of the appointment
+         * @author stephan teichmueller
+         */
+
+        public List<Appointment> getTermine() {
+            return termine;
+        }
+
+        /**
+         *
+         * @return the name of appointment
+         * @author stephan teichmueller
+         */
+
+        public String getName() {
+            return name;
+        }
+
+        /**
+         *
+         * @return the matrikelnumber
+         * @author jonas helmboldt
+         */
+
+        public String getMtrkNr() {
+            return mTrkNr;
+        }
+
+        /**
+         *
+         * @param name
+         * @param date
+         * @param repetition
+         * @param campusLocation
+         * @param room
+         * @param description
+         * @return the new appointment
+         * @author stephan teichmueller
+         */
+
+        public Appointment createAppointment(String name, LocalDateTime date, Repetition repetition, Campus campusLocation, String room, String description){
+            Appointment appointment = new Appointment(name,this,date,repetition,campusLocation,room,description);
+            addAppointment(appointment);
+            return appointment;
+        }
     }
-}
 
