@@ -45,14 +45,8 @@ import java.util.List;
 
         public void delAppointment(Appointment... appointments){
             for (Appointment appointment:appointments) {
-
                     this.termine.remove(appointment);
-
-
-
             }
-
-
         }
 
         /**
