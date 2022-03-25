@@ -62,7 +62,7 @@ Eine Möglichkeit der Interaktion wird ebenfalls Teil von Java 2 werden.
 Hier sind zusammengefasst alle bisher erstellten relevanten Diagramme und Schemata, sowie die vorhergehenden Entwürfe.
 
 ## UC
-![UC](https://raw.githubusercontent.com/fh-erfurt/WS2021_Java_Team_1_Service_6_Appointments/main/doc/documentation/pictures/UC_Terminverwaltung.png)
+![UC](https://raw.githubusercontent.com/fh-erfurt/WS2021_Java_Team_1_Service_6_Appointments/main/doc/documentation/pictures/UC_Terminverwaltung%20-%20v1.png)
 <br>
 Im ersten Entwurf wurde sich auf die notwendigsten Funktionalitäten beschränkt, die für die Realisierung des Gesamtprojekts sinnvoll wären. Eine grundlegende Terminverwaltung, die im vollen Umfang einem erstellenden Mitarbeiter zugeordnet wird, erschien als notwendig. Darüber hinaus war auch Teil des Entwurfsprozesses die Überlegung, dass eine Art rudimentäres Rechtesystem existieren könne. Hier gäbe es die Möglichkeit die Erstellung und sonstige Verwaltung eines Termins explizit nur Mitarbeitern zuzuordnen. Zusätzlich sollte ein Benutzer sich die bestehenden Termine anzeigen lassen können.
 <br>
