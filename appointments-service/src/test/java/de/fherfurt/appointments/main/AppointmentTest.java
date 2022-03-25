@@ -2,8 +2,8 @@ package de.fherfurt.appointments.main;
 
 import de.fherfurt.appointments.models.Professor;
 import de.fherfurt.appointments.models.Student;
-import org.assertj.core.api.*;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 
 import java.time.LocalDateTime;

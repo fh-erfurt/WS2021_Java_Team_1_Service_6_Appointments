@@ -3,10 +3,9 @@ package de.fherfurt.appointments.models;
 import de.fherfurt.appointments.main.Appointment;
 import de.fherfurt.appointments.main.Campus;
 import de.fherfurt.appointments.main.Repetition;
-import org.assertj.core.api.Assertions;
 import org.junit.Before;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;

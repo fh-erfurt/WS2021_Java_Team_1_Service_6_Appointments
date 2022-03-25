@@ -245,6 +245,16 @@ public class Appointment {
         this.room = room;
         this.description = description;
     }
+    public Appointment(int id, String name, Creator creator, LocalDateTime date, Repetition repetition, Campus campusLocation, String room, String description) {
+        this.id = id;
+        this.name = name;
+        this.creator = creator;
+        this.date = date;
+        this.repetition = repetition;
+        this.campusLocation = campusLocation;
+        this.room = room;
+        this.description = description;
+    }
 
 
 }
