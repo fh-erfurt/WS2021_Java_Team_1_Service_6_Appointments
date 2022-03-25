@@ -43,7 +43,7 @@ import java.util.List;
          * @author stephan teichmueller
          */
 
-        public void delAppointment(Appointment... appointments){ // brricht bei ersten nicht eingetragenen Termin ab und berücksichtigt die anderen gar nicht
+        public void delAppointment(Appointment... appointments){
             for (Appointment appointment:appointments) {
 
                     this.termine.remove(appointment);
