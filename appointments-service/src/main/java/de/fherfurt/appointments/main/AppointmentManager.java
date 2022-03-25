@@ -12,6 +12,7 @@ public class AppointmentManager {
     /**
      * insert all appointments in contact with the professor in the list
      * @author stephan teichmueller
+     * @author Artur Jadranski
      */
     private HashMap<Professor,Appointment> terminListeAllerProfessoren = new HashMap<>();
 
@@ -20,6 +21,7 @@ public class AppointmentManager {
      * @param appointment name of the appointment
      * @param student  name of the student
      * @author stephan teichmueller
+     * @author Artur Jadranski
      */
     public static void  registerStudent(Appointment appointment, Student student){
         appointment.addParticipant(student);
@@ -28,7 +30,8 @@ public class AppointmentManager {
 
     /**
      * remove a student from list
-     *@author stephan teichmueller
+     * @author stephan teichmueller
+     * @author Artur Jadranski
      */
     public static void  unsignedStudent(Appointment appointment,  Student student){
         appointment.unsignedParticipant(student);
@@ -40,6 +43,7 @@ public class AppointmentManager {
      * @param appointment
      * @param professor name of the Employee
      * @author stephan teichmueller
+     * @author Artur Jadranski
      */
 
     public static void  registerProfessor(Appointment appointment, Professor professor){
@@ -51,6 +55,7 @@ public class AppointmentManager {
      * @param appointment
      * @param professor
      * @author stephan teichmueller
+     * @author Artur Jadranski
      */
     public static void  unsignedProfessor(Appointment appointment, Professor professor){
         professor.delAppointment(appointment);
@@ -66,6 +71,7 @@ public class AppointmentManager {
      * @param room
      * @param description
      * @author stephan teichmueller
+     * @author Artur Jadranski
      */
 
     public void registerAppointment(String name, Professor creator, LocalDateTime date, Repetition repetition, Campus campusLocation, String room, String description){
