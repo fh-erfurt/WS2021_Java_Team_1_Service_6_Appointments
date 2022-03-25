@@ -183,3 +183,8 @@ Die Arbeit am Projekt kann in 3 grundlegende Abschnitte eingeteilt werden:
 
 
 
+
+</details>
+<br>
+<hr>
+
