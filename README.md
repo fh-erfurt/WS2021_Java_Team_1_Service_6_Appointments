@@ -179,6 +179,19 @@ Die Arbeit am Projekt kann in 3 grundlegende Abschnitte eingeteilt werden:
 * Erstellung und Implementierung von Tests
 * Fehlerbehebung
 
+</details>
+
+ 
+<details closed>
+<summary><b>Verwendete Programme</b></summary>
+ <br>
+ 
+* [Intellij](https://www.jetbrains.com/de-de/idea/ "Intellij") - IDE für Java
+* [draw.io](https://draw.io/ " draw.io ") - für Diagramme
+* [SharePoint]( https://www.microsoft.com/de-de/microsoft-365/sharepoint/collaboration " SharePoint ") - vorläufige Dokumentation, Präsentationen & Veranschaulichung, Projektplanung und Aufgabenverteilung
+* [Github](https://github.com/ "Github") – Versionskontrolle, Projektplanung und Aufgabenverteilung
+* [Discord](https://discord.com/ "Discord") - Kommunikationsmittel
+
 
 
 
