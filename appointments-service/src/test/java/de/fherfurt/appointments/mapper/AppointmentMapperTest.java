@@ -13,6 +13,7 @@ import java.time.LocalDateTime;
 
 
 /**
+ *
  * @author Jonas Helmboldt
  */
 class AppointmentMapperTest {

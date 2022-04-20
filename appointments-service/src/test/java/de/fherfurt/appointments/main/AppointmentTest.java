@@ -70,12 +70,5 @@ class AppointmentTest {
         Assertions.assertEquals(TestAppointment.getParticipants(), Arrays.asList(RandomName));
     }
 
-    /*@Test --> nicht benötigt weil delAppointment wird getestet(funktion ruft nur delAppointment auf
-    void TestcloseAppointment() {
-        //given
 
-        //when
-
-        //then
-    }*/
 }

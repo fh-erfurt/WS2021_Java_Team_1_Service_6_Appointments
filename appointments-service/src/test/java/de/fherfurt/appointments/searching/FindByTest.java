@@ -17,6 +17,9 @@ import static org.junit.jupiter.api.Assertions.*;
  * @author Jonas Helmboldt
  */
 class FindByTest {
+    /**
+     * find an appointment by the identifier(ID) of the appointment
+     */
 
     @Test
     void findById() {
@@ -35,6 +38,10 @@ class FindByTest {
         //then
         assertEquals(testFilter.FindById(testId), testAppointment);
     }
+
+    /**
+     * find an appointment by the name of the appointment
+     */
 
     @Test
     void findByName() {
@@ -55,6 +62,10 @@ class FindByTest {
 
     }
 
+    /**
+     * find an appointment by the date
+     */
+
     @Test
     void findByDate() {
         //given
@@ -72,6 +83,10 @@ class FindByTest {
         //then
         assertEquals(testFilter.FindByDate(testDate), List.of(testAppointment));
     }
+    /**
+     * find an appointment by the name of the creator
+     *
+     * */
 
     @Test
     void findByCreator() {
@@ -89,6 +104,10 @@ class FindByTest {
         //then
         assertEquals(testFilter.FindByCreator(testCreator), List.of(testAppointment));
     }
+
+    /**
+     * find an appointment by the location
+     */
 
     @Test
     void findByCampus() {

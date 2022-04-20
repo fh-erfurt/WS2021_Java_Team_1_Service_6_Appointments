@@ -17,6 +17,10 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 class SortByTest {
 
+    /**
+     * sort the appointments by the date
+     */
+
     @Test
     void sortByDate() {
         //given
@@ -36,6 +40,10 @@ class SortByTest {
         //then
         assertEquals(testSort.SortByDate(), List.of(testAppointment2, testAppointment1));
     }
+
+    /**
+     * sort the appointments by the creators name
+     */
 
     @Test
     void sortByCreatorName() {
@@ -57,7 +65,9 @@ class SortByTest {
         //then
         assertEquals(testSort.SortByCreatorName(), List.of(testAppointment2, testAppointment1));
     }
-
+    /**
+     * sort the appointments by the location
+     */
     @Test
     void sortByCampus() {
         //given

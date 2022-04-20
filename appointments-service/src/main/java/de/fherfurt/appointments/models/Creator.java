@@ -17,7 +17,7 @@ import java.util.List;
         /**
          * constructor of creator
          * @param name name of the creator
-         * @param mTrkNr matrikelnumber of the creator
+         * @param mTrkNr matriculation number of the creator to identify the creator
          * @author stephan teichmueller
          */
         public Creator(String name, String mTrkNr) {
@@ -42,7 +42,6 @@ import java.util.List;
          * @param appointments
          * @author stephan teichmueller
          */
-
         public void delAppointment(Appointment... appointments){
             for (Appointment appointment:appointments) {
                     this.termine.remove(appointment);
@@ -50,8 +49,8 @@ import java.util.List;
         }
 
         /**
-         * search for termine of an appointment
-         * @return the date(termine) of the appointment
+         * search for date of an appointment
+         * @return the date of the appointment
          * @author stephan teichmueller
          */
 
@@ -71,7 +70,7 @@ import java.util.List;
 
         /**
          *
-         * @return the matrikelnumber
+         * @return the matriculation number
          * @author jonas helmboldt
          */
 
