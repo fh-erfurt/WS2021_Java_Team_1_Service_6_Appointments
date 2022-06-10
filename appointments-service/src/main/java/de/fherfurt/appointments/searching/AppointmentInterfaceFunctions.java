@@ -26,17 +26,6 @@ public class AppointmentInterfaceFunctions implements AppointmentsClient {
         this.appointmentList = appointmentList;
     }
 
-    /*@Override
-    public List<NewsAppointment> getAppointByName(String AppointmentName) {
-            FindBy find = new FindBy(appointmentList);
-            List<Appointment> searchResult = find.FindByName(AppointmentName);
-            List<NewsAppointment> newsAppointmentList = new ArrayList<>();
-            AppointmentMapper mapper = new AppointmentMapper();
-            for (Appointment appointment : searchResult){
-                newsAppointmentList.add(mapper.NewsAppointmentMapper(appointment));
-            }
-            return newsAppointmentList;
-    }*/
 
     @Override
     public Optional<NewsAppointment> getAppointmentById(int id) {

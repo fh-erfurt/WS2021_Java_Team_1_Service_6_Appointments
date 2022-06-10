@@ -3,7 +3,6 @@ package de.fherfurt.appointments.searching;
 
 import de.fherfurt.appointments.main.Appointment;
 import de.fherfurt.appointments.main.Campus;
-import de.fherfurt.appointments.models.Creator;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -73,10 +72,10 @@ public class FindBy {
      * @return {@link Appointment} found in a {@link List<Appointment>}
      * @author Jonas Helmboldt
      */
-    public List<Appointment> FindByCreator (Creator inputCreator){
+    public List<Appointment> FindByCreator (int inputCreator){
 
         return inputAppointmentList.stream()
-                .filter(appointment -> appointment.getCreator().equals(inputCreator))
+                .filter(appointment -> inputCreator == appointment.getCreator())
                 .collect(Collectors.toList());
     }
 

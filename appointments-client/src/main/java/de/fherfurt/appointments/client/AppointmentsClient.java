@@ -3,7 +3,7 @@ package de.fherfurt.appointments.client;
 import de.fherfurt.appointments.client.transfer.objects.NewsAppointment;
 
 
-import java.util.List;
+import java.time.LocalDateTime;
 import java.util.Optional;
 
 /**
@@ -14,7 +14,11 @@ import java.util.Optional;
  */
 public interface AppointmentsClient {
 
-    //public List<NewsAppointment> getAppointByName(String name);
+    int createAppointment(String name, int creator, LocalDateTime date, String repetition, String campusLocation, String room, String description);
+
+    void deleteAppointment(int id);
+    void addParticipant(int appointmentId, int participantId);
+    void removeParticipant(int appointmentId, int participantId);
 
     /**
      * takes an id and searches for a corresponding appointment
@@ -24,7 +28,7 @@ public interface AppointmentsClient {
      *
      * @author Jonas Helmboldt
      */
-    public Optional<NewsAppointment> getAppointmentById(int id);
+    Optional<NewsAppointment> getAppointmentById(int id);
 
     /**
      * takes a name and searches for a corresponding appointment
@@ -34,5 +38,5 @@ public interface AppointmentsClient {
      *
      * @author Jonas Helmboldt
      */
-    public Optional<NewsAppointment> getAppointmentByName(String name);
+    Optional<NewsAppointment> getAppointmentByName(String name);
 }

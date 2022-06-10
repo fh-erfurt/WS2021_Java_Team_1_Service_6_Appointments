@@ -13,9 +13,9 @@ import java.util.stream.Collectors;
 public class DevPersonClient implements PersonClient {
 
     private final List<AppointmentPerson> persons = Arrays.asList(
-            new AppointmentPerson("Heinrich", "testmail@mail.com"),
-            new AppointmentPerson("Albert", "mail@mail.com"),
-            new AppointmentPerson("Manhans", "manhans@mail.com")
+            new AppointmentPerson(1,"Heinrich", "testmail@mail.com"),
+            new AppointmentPerson(2, "Albert", "mail@mail.com"),
+            new AppointmentPerson(3, "Manhans", "manhans@mail.com")
     );
 
     @Override
