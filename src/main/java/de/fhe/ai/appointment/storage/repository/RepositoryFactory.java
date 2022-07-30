@@ -1,9 +1,15 @@
 package de.fhe.ai.appointment.storage.repository;
 
+import de.fhe.ai.appointment.util.DataProvider;
+
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import java.util.logging.Logger;
+
 
 public class RepositoryFactory {
+
+    private static final Logger LOGGER = Logger.getLogger( RepositoryFactory.class.getSimpleName() );
 
     private static final String PERSISTENCE_UNIT_NAME = "appointment-unit";
 
@@ -25,7 +31,7 @@ public class RepositoryFactory {
         this.repository = new RepositoryImpl();
 
         //TODO: Dataprovider einfügen
-        / Create Test Data
+        //Create Test Data
         LOGGER.info( "Create Test Data" );
         DataProvider.createTestData().forEach( this.repository::createAppointment );
     }
