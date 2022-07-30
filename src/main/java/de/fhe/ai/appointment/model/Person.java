@@ -24,6 +24,6 @@ public class Person extends AbstractDatabaseEntity {
     private String email;
 
     //Eine Person kann viele Termine haben
-    @OneToMany
-    private Appointment appointment;
+    @ManyToMany(mappedBy = "persons")
+    private List<Appointment> appointments;
 }

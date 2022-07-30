@@ -25,6 +25,9 @@ public class RepositoryFactory {
         this.repository = new RepositoryImpl();
 
         //TODO: Dataprovider einfügen
+        / Create Test Data
+        LOGGER.info( "Create Test Data" );
+        DataProvider.createTestData().forEach( this.repository::createAppointment );
     }
 
     public AppointmentRepository getAppointmentRepository(){
