@@ -15,23 +15,39 @@ public class DataProvider {
     {
         List<Appointment> result = new ArrayList<>();
 
-        // Einzelne Appointments erstellen
+        //  Appointments
         Appointment appointment01 = new Appointment("Java 2", "Avemarg", LocalDateTime.now(), "weekly", "Altonaer Straße", "5.1.05", "Vorlesung Programmierung Java 2", null);
-        // Appointments ergänzen +5
+        Appointment appointment02 = new Appointment("Embedded Systems", "Bischoff", LocalDateTime.now(), "monthly", "Altonaer Straße", "9.1.06", "Vorlesung Embedded Systems", null);
+        Appointment appointment03 = new Appointment("Graphentheorie", "Haußen", LocalDateTime.now(), "daily", "Altonaer Straße", "6.2.05", "Vorlesung Graphentheorie", null);
+        Appointment appointment04 = new Appointment("Softwaretechnik 2", "Spaethe", LocalDateTime.now(), "monthly", "Altonaer Straße", "8.1.10", "Vorlesung Softwaretechnik 2", null);
+        Appointment appointment05 = new Appointment("Automation Anwendung", "Schorcht", LocalDateTime.now(), "weekly", "Altonaer Straße", "1.1.12", "Vorlesung Automation Anwendung", null);
+
 
         List<Person> persons = new ArrayList<>();
 
-        // Einzelne Personen erstellen
+        //  Personen
         Person person01 = new Person("Klaus", "Peter", "klaus.peter@fh-erfurt.de", null);
-        // Persons ergänzen +5
+        Person person02 = new Person("Fridolin", "Elefant", "Fridolin.Elefant@fh-erfurt.de", null);
+        Person person03 = new Person("Maxim", "Eimer", "m.e@fh-erfurt.de", null);
+        Person person04 = new Person("Mercedes", "Augustini", "Mercedes.Augustini@fh-erfurt.de", null);
+        Person person05 = new Person("Frank", "Zander", "Frank.Zander@fh-erfurt.de", null);
 
-        // Persons Liste befüllen
+
+        // Persons List
         persons.add(person01);
-        //...
+        persons.add(person02);
+        persons.add(person03);
+        persons.add(person04);
+        persons.add(person05);
 
-        // Result Liste befüllen
+
+        // Result List
         result.add(appointment01);
-        //...
+        result.add(appointment02);
+        result.add(appointment03);
+        result.add(appointment04);
+        result.add(appointment05);
+
 
         // Bei Persons die Appointments hinzufügen
         persons.forEach(person -> person.setAppointments( result ));
@@ -41,34 +57,5 @@ public class DataProvider {
 
 
         return result;
-
-
-
-
-        /*List<Person> personList = new ArrayList<>();
-
-        //TODO: find the correct Format for "date"
-        Appointment appointment01 = new Appointment("Java");
-        Appointment appointment02 = new Appointment();
-        Appointment appointment03= new Appointment();
-        Appointment appointment04 = new Appointment();
-        Appointment appointment05 = new Appointment();
-
-
-
-
-
-
-
-
-        personList.add( new Person( "Max",    "Mustermann",   "m.m@m.com",        appointment01 ) );
-        personList.add( new Person( "Michal", "Mustermann",   "m.muster@m.com",   appointment02 ) );
-        personList.add( new Person( "Martin", "Schmidt",      "m.s@m.com",        appointment03 );
-        personList.add( new Person( "Volker", "Schulz",       "v.s@m.com",        appointment04 ) );
-        personList.add( new Person( "Hans",   "Meier",        "hans.m@m.com",     appointment05 ) );
-        personList.add( new Person( "Gabi",   "Mustermann",   "g.m@m.com",        appointment02 ) );
-        personList.add( new Person( "Heike",  "Meier",        "h.m@m.com",        appointment04 ) );
-
-        return personList;*/
     }
 }
