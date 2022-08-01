@@ -28,9 +28,9 @@ public class RepositoryFactory {
     private RepositoryFactory(){
         this.entityManagerFactory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
 
-        this.repository = new RepositoryImpl();
+        this.repository = new RepositoryImpl(this.getPersonDao(), this.getAppointmentDao());
 
-        //TODO: Dataprovider einfügen
+
         //Create Test Data
         LOGGER.info( "Create Test Data" );
         DataProvider.createTestData().forEach( this.repository::createAppointment );
