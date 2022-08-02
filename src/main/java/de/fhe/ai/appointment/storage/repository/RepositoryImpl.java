@@ -44,8 +44,25 @@ public class RepositoryImpl implements PersonRepository, AppointmentRepository{
 
     @Override
     public List<Appointment> getAppointmentSortedBy(SortCriteriaEnum sortOrder) {
-        //TODO
-        return null;
+
+        if (sortOrder == SortCriteriaEnum.NAME_ASC)
+            return new ArrayList<>(this.appointmentDao.findSortedByNameAsc());
+        else if (sortOrder == SortCriteriaEnum.NAME_DSC)
+            return new ArrayList<>(this.appointmentDao.findSortedByNameDsc());
+        else if (sortOrder == SortCriteriaEnum.DATE_ASC)
+            return new ArrayList<>(this.appointmentDao.findSortedByDateAsc());
+        else if (sortOrder == SortCriteriaEnum.DATE_DSC)
+            return new ArrayList<>(this.appointmentDao.findSortedByDateDsc());
+        else if (sortOrder == SortCriteriaEnum.CREATOR_ASC)
+            return new ArrayList<>(this.appointmentDao.findSortedByCreatorAsc());
+        else if (sortOrder == SortCriteriaEnum.CREATOR_DSC)
+            return new ArrayList<>(this.appointmentDao.findSortedByCreatorDsc());
+        else if (sortOrder == SortCriteriaEnum.CAMPUSLOCATION_ASC)
+            return new ArrayList<>(this.appointmentDao.findSortedByCampusLocationAsc());
+        else if (sortOrder == SortCriteriaEnum.CAMPUSLOCATION_DSC)
+            return new ArrayList<>(this.appointmentDao.findSortedByCampusLocationDsc());
+        else
+            return this.getAllAppointments();
     }
 
     @Override
