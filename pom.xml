@@ -88,13 +88,6 @@
             <version>2.1.212</version>
         </dependency>
 
-        <!-- Postgres JDBC Driver -->
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>42.3.6</version>
-        </dependency>
-
         <!-- JPA Provider -->
         <dependency>
             <groupId>org.hibernate</groupId>
@@ -131,7 +124,7 @@
     </dependencies>
 
     <build>
-        <finalName>jab-server</finalName>
+        <finalName>jas-server</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

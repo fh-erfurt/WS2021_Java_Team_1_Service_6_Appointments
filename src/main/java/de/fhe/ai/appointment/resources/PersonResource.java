@@ -16,7 +16,6 @@ public class PersonResource {
     public PersonResource(){
         this.personRepository = RepositoryFactory.getInstance().getPersonRepository();
     }
-
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public List<Person> getAppointment(@QueryParam("appointmentId") @DefaultValue("-1") long appointmentId){
