@@ -13,6 +13,4 @@ public interface PersonRepository {
     boolean createPerson( Person person );
     boolean updatePerson( Person person );
     boolean deletePerson( long personId );
-
-    List<Person> getPersonWithAppointment(long appointmentId);
 }

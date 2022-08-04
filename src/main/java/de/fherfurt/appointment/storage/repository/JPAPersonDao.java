@@ -14,12 +14,4 @@ public class JPAPersonDao extends JpaGenericDao<Person> implements PersonDao  {
         super(Person.class, em);
     }
 
-    @Override
-    public Collection<Person> findWithAppointment(Appointment appointment){
-        Query query = getEntityManager().createQuery(
-                "SELECT e FROM " + getEntityClass().getCanonicalName() + " e where e.appointment = ?1" );
-        query.setParameter(1, appointment);
-
-        return (Collection<Person>) query.getResultList();
-    }
 }

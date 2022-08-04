@@ -20,12 +20,7 @@ public class PersonResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public List<Person> getAppointment(@QueryParam("appointmentId") @DefaultValue("-1") long appointmentId){
-        if (appointmentId != -1){
-            return this.personRepository.getPersonWithAppointment(appointmentId);
-        }
-        else {
             return this.personRepository.getAllPersons();
-        }
     }
 
     @GET

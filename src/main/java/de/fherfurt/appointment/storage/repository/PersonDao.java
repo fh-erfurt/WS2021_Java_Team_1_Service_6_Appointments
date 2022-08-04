@@ -7,5 +7,5 @@ import de.fherfurt.appointment.models.Person;
 import java.util.Collection;
 
 public interface PersonDao extends GenericDao<Person>{
-    Collection<Person> findWithAppointment(Appointment appointment);
+
 }

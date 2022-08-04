@@ -37,6 +37,7 @@ public class Appointment extends AbstractDatabaseEntity {
     @ManyToMany(cascade = CascadeType.PERSIST)
     private List<Person> persons;
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
