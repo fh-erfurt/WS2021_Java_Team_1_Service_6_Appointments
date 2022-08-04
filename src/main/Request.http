@@ -23,7 +23,7 @@ Accept: application/json
 DELETE http://localhost:8080/api/appointment/1
 Accept: application/json
 
-### Create Person
+### Create appointment
 POST http://localhost:8080/api/appointment
 Content-Type: application/json
 Accept: application/json
@@ -48,6 +48,6 @@ Accept: application/json
 GET http://localhost:8080/api/person
 Accept: application/json
 
-### Get Person with ID 2
+### Get person with ID 2
 GET http://localhost:8080/api/person/2
 Accept: application/json
