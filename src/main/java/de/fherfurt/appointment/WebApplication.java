@@ -9,9 +9,20 @@ import org.slf4j.LoggerFactory;
 
 import java.net.URI;
 
+/**
+ * The type Web application.
+ */
 public class WebApplication {
+    /**
+     * The constant BASE_URI.
+     */
     public static final String BASE_URI = "http://localhost:8080/";
 
+    /**
+     * Start server server.
+     *
+     * @return the server
+     */
     public static Server startServer() {
 
         final ResourceConfig config = new ResourceConfig(BaseResource.class );
@@ -21,6 +32,11 @@ public class WebApplication {
         return server;
     }
 
+    /**
+     * The entry point of application.
+     *
+     * @param args the input arguments
+     */
     public static void main(String[] args) {
         Logger LOG = LoggerFactory.getLogger( WebApplication.class );
 

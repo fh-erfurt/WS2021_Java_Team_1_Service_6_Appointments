@@ -8,17 +8,34 @@ import javax.persistence.Query;
 import java.util.Collection;
 import java.util.List;
 
+/**
+ * The class Jpa generic dao extends from AbstractDatabaseEntity.
+ *
+ * @param <T> the type parameter
+ */
 class JpaGenericDao<T extends AbstractDatabaseEntity> implements GenericDao<T> {
 
+    /**
+     * The Persistent class.
+     */
     protected final Class<T> persistentClass;
+    /**
+     * The Entity manager.
+     */
     protected final EntityManager entityManager;
 
+    /**
+     * Instantiates a new Jpa generic dao.
+     *
+     * @param type the type
+     * @param em   the em
+     */
     public JpaGenericDao( Class<T> type, EntityManager em )
     {
         this.persistentClass = type;
         this.entityManager = em;
     }
-
+    // findById( final Long id) alternative laut Referenz
     public T findById(Long id) {
         return getEntityManager().find( persistentClass, id );
     }
@@ -92,11 +109,21 @@ class JpaGenericDao<T extends AbstractDatabaseEntity> implements GenericDao<T> {
         Getter & Setter
      */
 
+    /**
+     * Gets entity class.
+     *
+     * @return the entity class
+     */
     public Class<T> getEntityClass()
     {
         return persistentClass;
     }
 
+    /**
+     * Gets entity manager.
+     *
+     * @return the entity manager
+     */
     public EntityManager getEntityManager()
     {
         return entityManager;

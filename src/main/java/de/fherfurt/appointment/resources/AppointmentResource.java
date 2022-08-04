@@ -11,14 +11,28 @@ import jakarta.ws.rs.core.Response;
 
 import java.util.List;
 
+/**
+ * The class Appointment resource.
+ * @creator jadranski
+ */
 public class AppointmentResource {
 
     private final AppointmentRepository appointmentRepository;
 
+    /**
+     * Instantiates a new Appointment resource.
+     */
     public AppointmentResource(){
         this.appointmentRepository = RepositoryFactory.getInstance().getAppointmentRepository();
     }
 
+    /**
+     * Gets appointment.
+     *
+     * @param personId  the person id
+     * @param sortOrder the sort order
+     * @return the appointment, a variable
+     */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public List<Appointment> getAppointment(
@@ -33,6 +47,12 @@ public class AppointmentResource {
             return this.appointmentRepository.getAllAppointments();
     }
 
+    /**
+     * Gets appointment.
+     *
+     * @param appointmentId the appointment id
+     * @return the appointment
+     */
     @GET
     @Path("{appointmentId:\\d+}")
     @Produces(MediaType.APPLICATION_JSON)
@@ -48,6 +68,14 @@ public class AppointmentResource {
         }
     }
 
+    /**
+     * Create appointment response.
+     * // to create a Appointment
+     *
+     * @param appointmentToCreate the appointment to create
+     * @return the response
+     * @creator teichmueller
+     */
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
@@ -62,6 +90,13 @@ public class AppointmentResource {
         }
     }
 
+    /**
+     * Update appointment response.
+     * // to create a Appointment
+     * @param appointmentToUpdate the appointment to update
+     * @return the response
+     * @creator helmboldt
+     */
     @PUT
     @Path("{appointmentId:\\d+}")
     @Consumes(MediaType.APPLICATION_JSON)
@@ -76,6 +111,13 @@ public class AppointmentResource {
         }
     }
 
+    /**
+     * Delete appointment response.
+     * // to delete a Appointment
+     * @param appointmentId the appointment id
+     * @return the response
+     * @creator helmboldt
+     */
     @DELETE
     @Path("{appointmentId:\\d+}")
     public Response deleteAppointment(@PathParam("appointmentId") long appointmentId){

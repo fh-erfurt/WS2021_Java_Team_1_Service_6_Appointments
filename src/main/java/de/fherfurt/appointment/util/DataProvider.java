@@ -9,9 +9,17 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * The class Data provider.
+ */
 public class DataProvider {
 
-       public static List<Appointment> createTestData()
+  /**
+   * Create test data list.
+   *
+   * @return the list
+   */
+  public static List<Appointment> createTestData()
     {
 
       List<Appointment> appointmentList= new ArrayList<>();

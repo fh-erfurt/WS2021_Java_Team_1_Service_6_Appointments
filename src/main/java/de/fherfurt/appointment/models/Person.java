@@ -11,6 +11,10 @@ import javax.persistence.ManyToMany;
 import java.util.List;
 
 
+/**
+ * The class Person etends from AbstractDatabaseEntity.
+ * @creator: teichmueller
+ */
 @Getter
 @Setter
 @NoArgsConstructor

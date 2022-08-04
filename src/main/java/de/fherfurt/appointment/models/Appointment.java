@@ -11,6 +11,10 @@ import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
+/**
+ * The class Appointment extends from AbstractDatabaseEntity.
+ * @creator:  teichmueller
+ */
 @Getter
 @Setter
 @NoArgsConstructor
@@ -20,7 +24,7 @@ public class Appointment extends AbstractDatabaseEntity {
 
     private String name;
 
-    private String creator; // change Type into String
+    private String creator;
 
     @Temporal(TemporalType.TIMESTAMP)
     private Date date;

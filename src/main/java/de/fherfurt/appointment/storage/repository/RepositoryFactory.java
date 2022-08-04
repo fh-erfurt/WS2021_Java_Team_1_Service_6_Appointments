@@ -7,6 +7,9 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import java.util.logging.Logger;
 
+/**
+ * The classRepository factory.
+ */
 public class RepositoryFactory {
     private static final Logger LOGGER = Logger.getLogger( RepositoryFactory.class.getSimpleName() );
 
@@ -17,6 +20,11 @@ public class RepositoryFactory {
 
     private static RepositoryFactory INSTANCE;
 
+    /**
+     * Gets instance.
+     *
+     * @return the instance
+     */
     public static RepositoryFactory getInstance() {
         if( INSTANCE == null )
             INSTANCE = new RepositoryFactory();
@@ -39,18 +47,38 @@ public class RepositoryFactory {
         DataProvider.createTestData().forEach( this.repository::createAppointment );
     }
 
+    /**
+     * Gets person repository.
+     *
+     * @return the person repository
+     */
     public PersonRepository getPersonRepository() {
         return this.repository;
     }
 
+    /**
+     * Gets appointment repository.
+     *
+     * @return the appointment repository
+     */
     public AppointmentRepository getAppointmentRepository() {
         return this.repository;
     }
 
+    /**
+     * Gets person dao.
+     *
+     * @return the person dao
+     */
     public JPAPersonDao getPersonDao() {
         return new JPAPersonDao( this.entityManagerFactory.createEntityManager() );
     }
 
+    /**
+     * Gets appointment dao.
+     *
+     * @return the appointment dao
+     */
     public JPAAppointmentDao getAppointmentDao() {
         return new JPAAppointmentDao( this.entityManagerFactory.createEntityManager() );
     }

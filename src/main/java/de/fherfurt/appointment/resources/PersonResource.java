@@ -10,19 +10,39 @@ import jakarta.ws.rs.core.Response;
 
 import java.util.List;
 
+/**
+ * The class Person resource.
+ * @creator jadranski
+ */
 public class PersonResource {
 
     private final PersonRepository personRepository;
 
+    /**
+     * Instantiates a new Person resource.
+     */
     public PersonResource(){
         this.personRepository = RepositoryFactory.getInstance().getPersonRepository();
     }
+
+    /**
+     * Gets appointment.
+     *
+     * @param appointmentId the appointment id
+     * @return the appointment
+     */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public List<Person> getAppointment(@QueryParam("appointmentId") @DefaultValue("-1") long appointmentId){
             return this.personRepository.getAllPersons();
     }
 
+    /**
+     * Gets person.
+     *
+     * @param personId the person id
+     * @return the person
+     */
     @GET
     @Path("{personId:\\d+}")
     @Produces(MediaType.APPLICATION_JSON)
