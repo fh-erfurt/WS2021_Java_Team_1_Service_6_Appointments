@@ -30,7 +30,6 @@ public class RepositoryFactory {
 
         this.repository = new RepositoryImpl(this.getPersonDao(), this.getAppointmentDao());
 
-
         //Create Test Data
         LOGGER.info( "Create Test Data" );
         DataProvider.createTestData().forEach( this.repository::createAppointment );
