@@ -2,6 +2,7 @@ package de.fherfurt.appointment.storage.repository;
 
 
 import de.fherfurt.appointment.models.Appointment;
+import de.fherfurt.appointment.models.Person;
 import de.fherfurt.appointment.models.SortCriteriaEnum;
 
 import java.util.List;
@@ -16,4 +17,6 @@ public interface AppointmentRepository {
     boolean deleteAppointment(Long appointmentId);
 
     List<Appointment> getAppointmentSortedBy( SortCriteriaEnum sortOrder );
+
+    List<Appointment> getAppointmentWithPerson(long personId);
 }

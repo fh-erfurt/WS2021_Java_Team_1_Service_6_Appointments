@@ -21,13 +21,16 @@ public class AppointmentResource {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public List<Appointment> getAppointment(@QueryParam("sortOrder") @DefaultValue("UNDEFINED")SortCriteriaEnum sortOrder){
-        if (sortOrder != SortCriteriaEnum.UNDEFINED){
-            return this.appointmentRepository.getAppointmentSortedBy(sortOrder);
-        }
-        else{
+    public List<Appointment> getAppointment(
+            @QueryParam( "personId" ) @DefaultValue( "-1" ) long personId,
+            @QueryParam( "sortOrder" ) @DefaultValue( "UNDEFINED" ) SortCriteriaEnum sortOrder
+    ) {
+        if( personId != -1 )
+            return this.appointmentRepository.getAppointmentWithPerson( personId );
+        else if ( sortOrder != SortCriteriaEnum.UNDEFINED )
+            return this.appointmentRepository.getAppointmentSortedBy( sortOrder );
+        else
             return this.appointmentRepository.getAllAppointments();
-        }
     }
 
     @GET

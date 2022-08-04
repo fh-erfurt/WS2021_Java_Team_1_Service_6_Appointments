@@ -1,8 +1,10 @@
 package de.fherfurt.appointment.storage.repository;
 
 import de.fherfurt.appointment.models.Appointment;
+import de.fherfurt.appointment.models.Person;
 
 import javax.persistence.EntityManager;
+import javax.persistence.Query;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
@@ -12,6 +14,15 @@ public class JPAAppointmentDao extends JpaGenericDao<Appointment> implements App
 
     public JPAAppointmentDao(EntityManager em) {
         super(Appointment.class, em);
+    }
+
+    @Override
+    public Collection<Appointment> findWithPerson(Person person) {
+        Query query = getEntityManager().createQuery(
+                "SELECT e FROM " + getEntityClass().getCanonicalName() + " e where e.persons = ?1" );
+        query.setParameter(1, person);
+
+        return (Collection<Appointment>) query.getResultList();
     }
 
     @Override

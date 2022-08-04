@@ -67,6 +67,16 @@ public class RepositoryImpl implements PersonRepository, AppointmentRepository{
     }
 
     @Override
+    public List<Appointment> getAppointmentWithPerson(long personId) {
+            Person person = this.getPerson(personId);
+
+            if (person == null){
+                return new ArrayList<>();
+            }
+            return new ArrayList<>(this.appointmentDao.findWithPerson(person));
+    }
+
+    @Override
     public List<Person> getAllPersons() {
         return new ArrayList<>(this.personDao.findAll());
     }
@@ -91,13 +101,5 @@ public class RepositoryImpl implements PersonRepository, AppointmentRepository{
         return this.personDao.delete(personId);
     }
 
-    @Override
-    public List<Person> getPersonWithAppointment(long appointmentId) {
-        Appointment appointment = this.getAppointment(appointmentId);
 
-        if (appointment == null){
-            return new ArrayList<>();
-        }
-        return new ArrayList<>(this.personDao.findWithAppointment(appointment));
-    }
 }
