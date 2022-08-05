@@ -9,6 +9,9 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 import java.util.Collection;
+import java.util.List;
+import java.util.logging.Logger;
+import java.util.stream.Collectors;
 
 /**
  * The class Jpa appointment dao, which extends from  Appointment by JpaGenericDao.
@@ -30,12 +33,14 @@ public class JPAAppointmentDao extends JpaGenericDao<Appointment> implements App
     }
 
     @Override
-    public Collection<Appointment> findWithPerson(Person person) {
-        Query query = getEntityManager().createQuery(
-                "SELECT e FROM " + getEntityClass().getCanonicalName() + " e where e.persons = ?1" );
-        query.setParameter(1, person);
+    public Collection<Appointment> findWithPerson(long personId) {
+        List<Appointment> app =(List<Appointment>) this.findAll();
 
-        return (Collection<Appointment>) query.getResultList();
+        var list = app.stream()
+                .filter(a -> a.hasPerson( personId ))
+                .collect(Collectors.toList());
+        list.forEach(a -> LOGGER.info(a.toString()));
+        return list;
     }
 
     @Override

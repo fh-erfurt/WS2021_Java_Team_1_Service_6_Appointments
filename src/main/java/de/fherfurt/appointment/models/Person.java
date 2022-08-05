@@ -1,14 +1,10 @@
 package de.fherfurt.appointment.models;
 
 import de.fherfurt.appointment.storage.core.AbstractDatabaseEntity;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.Entity;
-import javax.persistence.ManyToMany;
-import java.util.List;
+import java.util.Objects;
 
 
 /**
@@ -28,4 +24,16 @@ public class Person extends AbstractDatabaseEntity {
 
     private String email;
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return Objects.equals(firstName, person.firstName) && Objects.equals(lastName, person.lastName) && Objects.equals(email, person.email);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(firstName, lastName, email);
+    }
 }

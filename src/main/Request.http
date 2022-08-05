@@ -10,7 +10,6 @@ Accept: application/json
 GET http://localhost:8080/api/appointment/1
 Accept: application/json
 
-//TODO
 ### Get appointment with person with ID = 2
 GET http://localhost:8080/api/appointment?personId=2
 Accept: application/json
@@ -29,17 +28,17 @@ Content-Type: application/json
 Accept: application/json
 
 {
-  "name": "Test",
-  "creator": "Test",
-  "repetition": "Testm",
-  "campusLocation": "Test",
-  "room": "Test",
-  "description": "Test",
+  "name": "Java Tutorium",
+  "creator": "Xander Van der Weken",
+  "repetition": "weekly",
+  "campusLocation": "Altonaer Straße",
+  "room": "5.1.05",
+  "description": "Cooles Tutorium da lernt ihr was!",
   "persons": [
       {
-    "firstName": "Postgasse 2",
-    "lastName": "Weimar",
-    "email": "99424"
+    "firstName": "Jonas",
+    "lastName": "Helmboldt",
+    "email": "jomail@mail.de"
       }
   ]
 }
