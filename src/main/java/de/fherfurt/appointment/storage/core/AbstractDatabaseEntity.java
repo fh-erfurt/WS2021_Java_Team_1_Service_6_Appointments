@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.Date;
 
 /**
- * The class Abstract database entity.
+ * The class Abstract database entity define the base of class at database.
  * @creator helmboldt
  */
 
@@ -24,15 +24,13 @@ public abstract class AbstractDatabaseEntity
     @Temporal(TemporalType.TIMESTAMP)
     private Date modified;
 
-    /**
-     * Instantiates a new Abstract database entity.
-     */
+
     public AbstractDatabaseEntity() {}
 
     /**
      * Gets created.
      *
-     * @return the created
+     * @return the date , w´hen its created
      */
     public Date getCreated()
     {
@@ -40,9 +38,9 @@ public abstract class AbstractDatabaseEntity
     }
 
     /**
-     * Sets created.
+     * Sets Date of creation.
      *
-     * @param created the created
+     * @param created the  date of created
      */
     public void setCreated(Date created)
     {
@@ -52,7 +50,7 @@ public abstract class AbstractDatabaseEntity
     /**
      * Gets id.
      *
-     * @return the id
+     * @return id
      */
     public Long getId()
     {
@@ -60,7 +58,7 @@ public abstract class AbstractDatabaseEntity
     }
 
     /**
-     * Sets id.
+     * Sets the id.
      *
      * @param id the id
      */
@@ -82,7 +80,7 @@ public abstract class AbstractDatabaseEntity
     /**
      * Sets modified.
      *
-     * @param modified the modified
+     * @param modified the date, whenn its  modified
      */
     public void setModified(Date modified)
     {

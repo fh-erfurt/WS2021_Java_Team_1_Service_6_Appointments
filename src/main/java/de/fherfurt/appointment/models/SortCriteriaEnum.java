@@ -1,40 +1,40 @@
 package de.fherfurt.appointment.models;
 
 /**
- * The enum Sort criteria enum is sorted the attributes.
- * @creator: helmboldt
+ * The enum Sort criteria enum define all Cretias.
+ * @author  helmboldt
  */
 public enum SortCriteriaEnum {
     /**
-     * Name asc sort criteria enum.
+     * sort by Name in direction from A to Z.
      */
     NAME_ASC,
     /**
-     * Name dsc sort criteria enum.
+     * sort by Name in direction from Z to A.
      */
     NAME_DSC,
     /**
-     * Date asc sort criteria enum.
+     * sort by Date in direction from oldest to newest.
      */
     DATE_ASC,
     /**
-     * Date dsc sort criteria enum.
+     * sort by Date in direction from newest to oldest .
      */
     DATE_DSC,
     /**
-     * Creator asc sort criteria enum.
+     * sort by Creator in direction from A to Z.
      */
     CREATOR_ASC,
     /**
-     * Creator dsc sort criteria enum.
+     * sort by Creator in direction from Z to A.
      */
     CREATOR_DSC,
     /**
-     * Campuslocation asc sort criteria enum.
+     * sort by Campuslocation in direction from A to Z.
      */
     CAMPUSLOCATION_ASC,
     /**
-     * Campuslocation dsc sort criteria enum.
+     * sort by Campuslocation in direction from Z to A.
      */
     CAMPUSLOCATION_DSC,
     /**

@@ -6,7 +6,9 @@ import de.fherfurt.appointment.models.Person;
 import java.util.Collection;
 
 /**
- * The interface Appointment dao.
+ * The interface Appointment dao which extends GenericDao<Appointment>
+ *     presents the connection to Database and a lot of find methods
+ * @author teichmueller
  */
 public interface AppointmentDao extends GenericDao<Appointment> {
 

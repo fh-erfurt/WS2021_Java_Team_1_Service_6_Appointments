@@ -12,8 +12,8 @@ import java.util.List;
 
 
 /**
- * The class Person etends from AbstractDatabaseEntity.
- * @creator: teichmueller
+ * The class Person extends from AbstractDatabaseEntity.
+ * @author teichmueller
  */
 @Getter
 @Setter

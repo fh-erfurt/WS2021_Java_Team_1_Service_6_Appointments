@@ -13,7 +13,7 @@ import java.util.Objects;
 
 /**
  * The class Appointment extends from AbstractDatabaseEntity.
- * @creator:  teichmueller
+ * @author  teichmueller
  */
 @Getter
 @Setter

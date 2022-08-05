@@ -24,7 +24,7 @@ interface GenericDao<T extends AbstractDatabaseEntity>{
     /**
      * Find all collection.
      *
-     * @return the collection
+     * @return the collection T
      */
     Collection<T> findAll();
 
@@ -32,7 +32,7 @@ interface GenericDao<T extends AbstractDatabaseEntity>{
      * Create boolean.
      *
      * @param entity the entity
-     * @return the boolean
+     * @return the boolean if the entity was created
      */
     boolean create( T entity );
 
@@ -40,12 +40,12 @@ interface GenericDao<T extends AbstractDatabaseEntity>{
      * Create all boolean.
      *
      * @param newEntities the new entities
-     * @return the boolean
+     * @return the boolean if the collections of Entities
      */
     boolean createAll( Collection<T> newEntities );
 
     /**
-     * Update t.
+     * Update   generic Entity t.
      *
      * @param entity the entity
      * @return the   Generic t
@@ -56,7 +56,7 @@ interface GenericDao<T extends AbstractDatabaseEntity>{
      * Delete boolean.
      *
      * @param id the id
-     * @return the boolean
+     * @return the boolean if its deleted
      */
     boolean delete( Long id );
 
@@ -64,7 +64,7 @@ interface GenericDao<T extends AbstractDatabaseEntity>{
      * Delete boolean.
      *
      * @param entity the entity
-     * @return the boolean
+     * @return the boolean if the generic entity is deleted
      */
     boolean delete( T entity );
 
@@ -72,7 +72,7 @@ interface GenericDao<T extends AbstractDatabaseEntity>{
      * Delete boolean.
      *
      * @param entries the entries
-     * @return the boolean
+     * @return the boolean if the List of Entries ia deleted
      */
     boolean delete( List<T> entries );
 }
