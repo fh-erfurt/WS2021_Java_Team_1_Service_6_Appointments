@@ -32,11 +32,10 @@ public class JPAAppointmentDao extends JpaGenericDao<Appointment> implements App
     public Collection<Appointment> findWithPerson(long personId) {
         List<Appointment> app =(List<Appointment>) this.findAll();
 
-        var list = app.stream()
+        return app.stream()
                 .filter(a -> a.hasPerson( personId ))
                 .collect(Collectors.toList());
-        list.forEach(a -> LOGGER.info(a.toString()));
-        return list;
+
     }
 
     @Override
