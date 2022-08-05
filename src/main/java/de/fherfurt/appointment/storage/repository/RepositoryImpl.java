@@ -9,23 +9,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * The type Repository.
+ * The class Repository.
  */
 public class RepositoryImpl implements PersonRepository, AppointmentRepository{
 
     private final AppointmentDao appointmentDao;
     private final PersonDao personDao;
 
-    /**
-     * Instantiates a new Repository.
-     *
-     * @param personDao      the person dao
-     * @param appointmentDao the appointment dao
-     */
+
     RepositoryImpl(PersonDao personDao, AppointmentDao appointmentDao){
         this.personDao = personDao;
         this.appointmentDao = appointmentDao;
     }
+
+    /**
+     * Appointment Repository Methods
+     *
+     */
 
     @Override
     public List<Appointment> getAllAppointments() {
@@ -51,6 +51,12 @@ public class RepositoryImpl implements PersonRepository, AppointmentRepository{
     public boolean deleteAppointment(Long appointmentId) {
         return this.appointmentDao.delete(appointmentId);
     }
+
+    /**
+     *
+     * Sort creterias of Appointments
+     *
+     */
 
     @Override
     public List<Appointment> getAppointmentSortedBy(SortCriteriaEnum sortOrder) {

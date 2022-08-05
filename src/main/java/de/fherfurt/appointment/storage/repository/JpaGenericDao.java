@@ -9,7 +9,12 @@ import java.util.Collection;
 import java.util.List;
 
 /**
- * The class Jpa generic dao extends from AbstractDatabaseEntity.
+ * The class Jpa generic dao extends from AbstractDatabaseEntity for all model objects.
+ *
+ *  * it has package-local visibility - thus, instances can only be created inside this package. Using  this approach,
+ *  * we can prevent any class from the outside of this package to create DAO instances.
+ *  *
+ *  * If you need a DAO, should use our DataController class.
  *
  * @param <T> the type parameter
  */

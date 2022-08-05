@@ -8,7 +8,7 @@ import de.fherfurt.appointment.models.SortCriteriaEnum;
 import java.util.List;
 
 /**
- * The interface Appointment repository is abstarction to AppointmentDao to get all functions.
+ * The interface Appointment repository is abstraction to AppointmentDao to get all functions.
  * @author teichmueller
  */
 public interface AppointmentRepository {

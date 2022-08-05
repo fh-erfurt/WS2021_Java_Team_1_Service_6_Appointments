@@ -9,16 +9,16 @@ import javax.persistence.Query;
 import java.util.Collection;
 
 /**
- * The class Jpa person dao.
- * @creator
+ * The class Jpa person dao, which extends from  Person by JpaGenericDao.
+ *
+ *  * we can prevent any class from the outside of this package to create DAO instances.
+ *  *
+ *  * If you need a DAO, should use our DataController class.
+ * @author teichmueller
  */
 public class JPAPersonDao extends JpaGenericDao<Person> implements PersonDao  {
 
-    /**
-     * Instantiates a new Jpa person dao.
-     *
-     * @param em the em
-     */
+
     public JPAPersonDao(EntityManager em){
         super(Person.class, em);
     }

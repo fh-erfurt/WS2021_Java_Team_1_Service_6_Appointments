@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
 import java.net.URI;
 
 /**
- * The type Web application.
+ * The class Webapplication.
  */
 public class WebApplication {
     /**

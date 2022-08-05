@@ -11,6 +11,7 @@ import java.util.List;
 
 /**
  * The class Data provider.
+ * @author teichmueller, helmboldt
  */
 public class DataProvider {
 
@@ -18,6 +19,7 @@ public class DataProvider {
    * Create test data list.
    *
    * @return the list
+   *
    */
   public static List<Appointment> createTestData()
     {
