@@ -22,15 +22,11 @@ import java.util.stream.Collectors;
  */
 public class JPAAppointmentDao extends JpaGenericDao<Appointment> implements AppointmentDao{
 
-    /**
-     * Instantiates a new Jpa appointment dao.
-     *
-     * @param em the EntityManager
-     * @creator huetter
-     */
+
     public JPAAppointmentDao(EntityManager em) {
         super(Appointment.class, em);
     }
+
 
     @Override
     public Collection<Appointment> findWithPerson(long personId) {

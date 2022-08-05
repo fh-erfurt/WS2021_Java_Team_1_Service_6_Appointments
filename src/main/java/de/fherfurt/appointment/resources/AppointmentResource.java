@@ -12,16 +12,14 @@ import jakarta.ws.rs.core.Response;
 import java.util.List;
 
 /**
- * The class Appointment resource.
- * @creator jadranski
+ * The class Appointment resource present httprequests for Appointment.
+ * @author jadranski
  */
 public class AppointmentResource {
 
     private final AppointmentRepository appointmentRepository;
 
-    /**
-     * Instantiates a new Appointment resource.
-     */
+
     public AppointmentResource(){
         this.appointmentRepository = RepositoryFactory.getInstance().getAppointmentRepository();
     }
@@ -31,7 +29,9 @@ public class AppointmentResource {
      *
      * @param personId  the person id
      * @param sortOrder the sort order
-     * @return the appointment, a variable
+     * @return all appointments,
+     *          appointement sorted,
+     *          appointment with given person
      */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
@@ -51,7 +51,7 @@ public class AppointmentResource {
      * Gets appointment.
      *
      * @param appointmentId the appointment id
-     * @return the appointment
+     * @return  appointment
      */
     @GET
     @Path("{appointmentId:\\d+}")
@@ -70,11 +70,12 @@ public class AppointmentResource {
 
     /**
      * Create appointment response.
-     * // to create a Appointment
+     *
      *
      * @param appointmentToCreate the appointment to create
-     * @return the response
-     * @creator teichmueller
+     * @return  http response
+         *      ok if created else internal_server_error
+     *
      */
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
@@ -92,10 +93,11 @@ public class AppointmentResource {
 
     /**
      * Update appointment response.
-     * // to create a Appointment
+     *
      * @param appointmentToUpdate the appointment to update
-     * @return the response
-     * @creator helmboldt
+     * @return http response
+     *         ok if created else internal_server_error
+     *
      */
     @PUT
     @Path("{appointmentId:\\d+}")
@@ -113,10 +115,11 @@ public class AppointmentResource {
 
     /**
      * Delete appointment response.
-     * // to delete a Appointment
+     *
      * @param appointmentId the appointment id
-     * @return the response
-     * @creator helmboldt
+     * @return http response
+     *         ok if created else Status.NOT_FOUND
+     *
      */
     @DELETE
     @Path("{appointmentId:\\d+}")

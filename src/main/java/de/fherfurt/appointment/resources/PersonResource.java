@@ -18,9 +18,7 @@ public class PersonResource {
 
     private final PersonRepository personRepository;
 
-    /**
-     * Instantiates a new Person resource.
-     */
+
     public PersonResource(){
         this.personRepository = RepositoryFactory.getInstance().getPersonRepository();
     }
@@ -29,7 +27,7 @@ public class PersonResource {
      * Gets appointment.
      *
      * @param appointmentId the appointment id
-     * @return the appointment
+     * @return all Persons with this appointID
      */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
@@ -41,7 +39,8 @@ public class PersonResource {
      * Gets person.
      *
      * @param personId the person id
-     * @return the person
+     * @return the person with the personID
+     *      ok if created else Status NOT_Found
      */
     @GET
     @Path("{personId:\\d+}")

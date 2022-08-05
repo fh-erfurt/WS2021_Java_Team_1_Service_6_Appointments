@@ -5,16 +5,16 @@ import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 
 /**
- * The class Base resource.
- * @creator helmboldt
+ * The class Base resource present httprequests and redirect to the other special Resources
+ * @author helmboldt
  */
 @Path("/api")
 public class BaseResource {
 
     /**
-     * Info string.
+     * Info string from the baseResource.
      *
-     * @return the string " Hello from Base Resource
+     * @return string " Hello from Base Resource"
      */
     @GET
     public String info() {
@@ -24,7 +24,7 @@ public class BaseResource {
     /**
      * Gets persons resource.
      *
-     * @return the persons resource
+     * @return  new persons resource
      */
     @Path("/person")
     public PersonResource getPersonsResource() {
@@ -34,7 +34,7 @@ public class BaseResource {
     /**
      * Gets addresses resources.
      *
-     * @return the addresses resources
+     * @return a new addresses resources
      */
     @Path("/appointment")
     public AppointmentResource getAddressesResources() {
