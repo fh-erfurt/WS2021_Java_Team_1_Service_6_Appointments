@@ -1,0 +1,52 @@
+### Get Greeting from Server
+GET http://localhost:8080/api/
+Accept: text/plain
+
+### Get full appointment List
+GET http://localhost:8080/api/appointment
+Accept: application/json
+
+### Get appointment with ID 1
+GET http://localhost:8080/api/appointment/1
+Accept: application/json
+
+### Get appointment with person with ID = 2
+GET http://localhost:8080/api/appointment?personId=2
+Accept: application/json
+
+### Get appointments sorted by name ascending
+http://localhost:8080/api/appointment?sortOrder=NAME_ASC
+Accept: application/json
+
+### Delete appointment with ID 1
+DELETE http://localhost:8080/api/appointment/1
+Accept: application/json
+
+### Create appointment
+POST http://localhost:8080/api/appointment
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Java Tutorium",
+  "creator": "Xander Van der Weken",
+  "repetition": "weekly",
+  "campusLocation": "Altonaer Straße",
+  "room": "5.1.05",
+  "description": "Cooles Tutorium da lernt ihr was!",
+  "persons": [
+      {
+    "firstName": "Jonas",
+    "lastName": "Helmboldt",
+    "email": "jomail@mail.de"
+      }
+  ]
+}
+
+### Get all persons
+GET http://localhost:8080/api/person
+Accept: application/json
+
+### Get person with ID 2
+GET http://localhost:8080/api/person/2
+Accept: application/json
