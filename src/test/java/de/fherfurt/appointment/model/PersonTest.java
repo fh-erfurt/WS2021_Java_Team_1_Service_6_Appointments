@@ -6,6 +6,10 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+/**
+ * class PersonTest check an person if its equal to another person.
+ * @author helmboldt
+ */
 
 public class PersonTest {
     private Person person;
