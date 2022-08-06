@@ -1,38 +1,30 @@
 package de.fherfurt.appointment.storage.repository;
 
 import de.fherfurt.appointment.models.Appointment;
-import de.fherfurt.appointment.models.Person;
 
 import javax.persistence.EntityManager;
-import javax.persistence.Query;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 import java.util.Collection;
 import java.util.List;
-import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 /**
- * The class Jpa appointment dao, which extends from  Appointment by JpaGenericDao.
- * i
- *
- *
+ * implementation of previously defined methods
  */
-public class JPAAppointmentDao extends JpaGenericDao<Appointment> implements AppointmentDao{
-
+public class JPAAppointmentDao extends JpaGenericDao<Appointment> implements AppointmentDao {
 
     public JPAAppointmentDao(EntityManager em) {
         super(Appointment.class, em);
     }
 
-
     @Override
     public Collection<Appointment> findWithPerson(long personId) {
-        List<Appointment> app =(List<Appointment>) this.findAll();
+        List<Appointment> app = (List<Appointment>) this.findAll();
 
         return app.stream()
-                .filter(a -> a.hasPerson( personId ))
+                .filter(a -> a.hasPerson(personId))
                 .collect(Collectors.toList());
 
     }

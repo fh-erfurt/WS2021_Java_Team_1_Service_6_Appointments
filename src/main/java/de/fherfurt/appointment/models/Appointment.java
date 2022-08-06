@@ -12,8 +12,10 @@ import java.util.List;
 import java.util.Objects;
 
 /**
- * The class Appointment extends from AbstractDatabaseEntity.
- * @author  teichmueller
+ * appointment class including important attributes for a basic appointment
+ * extends from {@link AbstractDatabaseEntity}
+ *
+ * @author teichmueller
  */
 @Getter
 @Setter
@@ -37,21 +39,20 @@ public class Appointment extends AbstractDatabaseEntity {
 
     private String description;
 
-
     @ManyToMany(cascade = CascadeType.PERSIST)
     private List<Person> persons;
 
+
     /**
-     * The method show true if the person is in the personList
-     * @param personId
+     * method to get info about presence of a person in a specific appointment
+     *
+     * @param personId id of person
      * @return true if found
      *         else false
-     *
      */
-
-    public boolean hasPerson (long personId) {
-        for( Person p : this.getPersons() ) {
-            if( p.getId() == personId ) {
+    public boolean hasPerson(long personId) {
+        for (Person p : this.getPersons()) {
+            if (p.getId() == personId) {
                 return true;
             }
         }

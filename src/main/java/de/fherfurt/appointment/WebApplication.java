@@ -9,41 +9,30 @@ import org.slf4j.LoggerFactory;
 
 import java.net.URI;
 
-/**
- * The class Webapplication.
- */
+
 public class WebApplication {
-    /**
-     * The constant BASE_URI.
-     */
+
     public static final String BASE_URI = "http://localhost:8080/";
 
-    /**
-     * Start server server.
-     *
-     * @return the server
-     */
     public static Server startServer() {
 
-        final ResourceConfig config = new ResourceConfig(BaseResource.class );
+        // scan packages
+        // final ResourceConfig config = new ResourceConfig().packages("de.fherfurt.appointment.resources");
+
+        final ResourceConfig config = new ResourceConfig(BaseResource.class);
         Server server =
-                JettyHttpContainerFactory.createServer(URI.create( BASE_URI ), config);
+                JettyHttpContainerFactory.createServer(URI.create(BASE_URI), config);
 
         return server;
     }
 
-    /**
-     * The entry point of application.
-     *
-     * @param args the input arguments
-     */
     public static void main(String[] args) {
-        Logger LOG = LoggerFactory.getLogger( WebApplication.class );
+        Logger LOG = LoggerFactory.getLogger(WebApplication.class);
 
         try {
             final Server server = startServer();
 
-            Runtime.getRuntime().addShutdownHook( new Thread(() -> {
+            Runtime.getRuntime().addShutdownHook(new Thread(() -> {
                 try {
                     LOG.info("Shutting down the application...");
                     server.stop();
@@ -55,6 +44,7 @@ public class WebApplication {
 
             LOG.info("Application started. -- Stop the application using CTRL+C\n");
 
+            // block and wait shut down signal, like CTRL+C
             Thread.currentThread().join();
         } catch (InterruptedException ex) {
             LOG.error(null, ex);

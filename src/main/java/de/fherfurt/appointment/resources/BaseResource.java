@@ -5,14 +5,15 @@ import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 
 /**
- * The class Base resource present httprequests and redirect to the other special Resources
- * @author helmboldt
+ * handles basic httprequest and forwards them to special resources {@see AppointmentResource, PersonResource}
+ *
+ * @author jadranski
  */
 @Path("/api")
 public class BaseResource {
 
     /**
-     * Info string from the baseResource.
+     * info string from the baseResource
      *
      * @return string " Hello from Base Resource"
      */
@@ -22,9 +23,9 @@ public class BaseResource {
     }
 
     /**
-     * Gets persons resource.
+     * gets persons resource
      *
-     * @return  new persons resource
+     * @return new persons resource
      */
     @Path("/person")
     public PersonResource getPersonsResource() {
@@ -32,7 +33,7 @@ public class BaseResource {
     }
 
     /**
-     * Gets addresses resources.
+     * gets addresses resources
      *
      * @return a new addresses resources
      */

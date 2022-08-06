@@ -4,27 +4,19 @@ package de.fherfurt.appointment.util;
 import de.fherfurt.appointment.models.Appointment;
 import de.fherfurt.appointment.models.Person;
 
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 /**
- * The class Data provider.
+ * data provider
+ *
  * @author teichmueller, helmboldt
  */
 public class DataProvider {
 
-  /**
-   * Create test data list.
-   *
-   * @return the list
-   *
-   */
-  public static List<Appointment> createTestData()
-    {
-
-      List<Appointment> appointmentList= new ArrayList<>();
+    public static List<Appointment> createTestData() {
+        List<Appointment> appointmentList = new ArrayList<>();
 
         Person person01 = new Person("Klaus", "Peter", "klaus.peter@fh-erfurt.de");
         Person person02 = new Person("Fridolin", "Elefant", "Fridolin.Elefant@fh-erfurt.de");
@@ -50,7 +42,5 @@ public class DataProvider {
         appointmentList.add(new Appointment("Automation Anwendung", "Schorcht", new Date(), "weekly", "Altonaer Straße", "1.1.12", "Vorlesung Automation Anwendung", personList2));
 
         return appointmentList;
-
-
     }
 }

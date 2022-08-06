@@ -4,14 +4,14 @@ import javax.persistence.*;
 import java.util.Date;
 
 /**
- * The class Abstract database entity define the base of class at database.
- * @author  helmboldt
+ * base structure for every class in database
+ *
+ * @author helmboldt
  */
 
 @Entity
-@Inheritance( strategy = InheritanceType.TABLE_PER_CLASS )
-public abstract class AbstractDatabaseEntity
-{
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+public abstract class AbstractDatabaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.TABLE)
     private Long id;
@@ -25,109 +25,53 @@ public abstract class AbstractDatabaseEntity
     private Date modified;
 
 
-    public AbstractDatabaseEntity() {}
+    public AbstractDatabaseEntity() {
+    }
 
-    /**
-     * Gets created.
-     *
-     * @return the date , w´hen its created
-     */
-    public Date getCreated()
-    {
+    public Date getCreated() {
         return created;
     }
 
-    /**
-     * Sets Date of creation.
-     *
-     * @param created the  date of created
-     */
-    public void setCreated(Date created)
-    {
+    public void setCreated(Date created) {
         this.created = created;
     }
 
-    /**
-     * Gets id.
-     *
-     * @return id
-     */
-    public Long getId()
-    {
+    public Long getId() {
         return id;
     }
 
-    /**
-     * Sets the id.
-     *
-     * @param id the id
-     */
-    public void setId(Long id)
-    {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    /**
-     * Gets modified.
-     *
-     * @return the modified
-     */
-    public Date getModified()
-    {
+    public Date getModified() {
         return modified;
     }
 
-    /**
-     * Sets modified.
-     *
-     * @param modified the date, whenn its  modified
-     */
-    public void setModified(Date modified)
-    {
+    public void setModified(Date modified) {
         this.modified = modified;
     }
 
-    /**
-     * Gets version.
-     *
-     * @return the version
-     */
-    public Long getVersion()
-    {
+    public Long getVersion() {
         return version;
     }
 
-    /**
-     * Sets version.
-     *
-     * @param version the version
-     */
-    public void setVersion(Long version)
-    {
+    public void setVersion(Long version) {
         this.version = version;
     }
-
 
     /*
         JPA Helper Methods
      */
-
-    /**
-     *  the method On create.
-     */
     @PrePersist
-    void onCreate()
-    {
-        this.setCreated( new Date() );
+    void onCreate() {
+        this.setCreated(new Date());
     }
 
-    /**
-     *  the method On update.
-     */
+
     @PreUpdate
-    void onUpdate()
-    {
-        this.setModified( new Date() );
+    void onUpdate() {
+        this.setModified(new Date());
     }
 
     @Override
@@ -139,5 +83,4 @@ public abstract class AbstractDatabaseEntity
                 ", modified=" + modified +
                 '}';
     }
-
 }

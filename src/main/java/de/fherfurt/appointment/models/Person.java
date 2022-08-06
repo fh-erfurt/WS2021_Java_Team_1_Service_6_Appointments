@@ -1,14 +1,19 @@
 package de.fherfurt.appointment.models;
 
 import de.fherfurt.appointment.storage.core.AbstractDatabaseEntity;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.Entity;
 import java.util.Objects;
 
 
 /**
- * The class Person extends from AbstractDatabaseEntity.
+ * person class including important attributes for a basic person
+ * extends from {@link AbstractDatabaseEntity}
+ *
  * @author teichmueller
  */
 @Getter

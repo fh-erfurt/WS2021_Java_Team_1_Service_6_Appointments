@@ -6,46 +6,43 @@ import de.fherfurt.appointment.models.Person;
 import java.util.List;
 
 /**
- * The interface Person repository.The interface Person repository is abstraction to PersonDao to get all functions.
+ * repository to storage person objects
+ *
+ * @author teichmueller
  */
 public interface PersonRepository {
 
-    /**
-     * Gets all persons.
-     *
-     * @return  all persons
-     */
     List<Person> getAllPersons();
 
     /**
-     * Gets person.
+     * gets person based on given personId
      *
-     * @param personId the person id
-     * @return the person with person Id
+     * @param personId id of person object
+     * @return one person with the given personId
      */
-    Person getPerson(long personId );
+    Person getPerson(long personId);
 
     /**
-     * Create person boolean.
+     * create person (currently not used)
      *
-     * @param person the person
-     * @return the boolean if person is created
+     * @param person given person
+     * @return true if successful
      */
-    boolean createPerson( Person person );
+    boolean createPerson(Person person);
 
     /**
-     * Update person boolean.
+     * update person (currently not used)
      *
-     * @param person the person
-     * @return the boolean if a person is updated
+     * @param person given person
+     * @return true if successful
      */
-    boolean updatePerson( Person person );
+    boolean updatePerson(Person person);
 
     /**
-     * Delete person boolean.
+     * delete person (currently not used)
      *
-     * @param personId the person id
-     * @return the boolean if a person with th person id is deleted
+     * @param personId given personId
+     * @return true if successful
      */
-    boolean deletePerson( long personId );
+    boolean deletePerson(long personId);
 }

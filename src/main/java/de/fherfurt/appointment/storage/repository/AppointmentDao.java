@@ -1,78 +1,72 @@
 package de.fherfurt.appointment.storage.repository;
 
 import de.fherfurt.appointment.models.Appointment;
-import de.fherfurt.appointment.models.Person;
 
 import java.util.Collection;
 
-/**
- * The interface Appointment dao which extends GenericDao<Appointment>
- *     presents the connection to Database and a lot of find methods
- * @author teichmueller
- */
 public interface AppointmentDao extends GenericDao<Appointment> {
 
     /**
-     * Find with person collection.
+     * the method "findWithPerson" will find all appointments with an attending person based on a personId
      *
      * @param personId the person
-     * @return the collection of Appointment
+     * @return the collection of appointments
      */
     Collection<Appointment> findWithPerson(long personId);
 
     /**
-     * Find sorted by name asc collection.
+     * the method "findSortedByNameAsc" will return a sorted appointment collection by name ascending
      *
-     * @return the collection
+     * @return sorted appointment collection
      */
     Collection<Appointment> findSortedByNameAsc();
 
     /**
-     * Find sorted by name dsc collection.
+     * the method "findSortedByNameDsc" will return a sorted appointment collection by name descending
      *
-     * @return the collection
+     * @return sorted appointment collection
      */
     Collection<Appointment> findSortedByNameDsc();
 
     /**
-     * Find sorted by date asc collection.
+     * the method "findSortedByDateAsc" will return a sorted appointment collection by date ascending
      *
-     * @return the collection
+     * @return sorted appointment collection
      */
     Collection<Appointment> findSortedByDateAsc();
 
     /**
-     * Find sorted by date dsc collection.
+     * the method "findSortedByDateDsc" will return a sorted appointment collection by date descending
      *
-     * @return the collection
+     * @return sorted appointment collection
      */
     Collection<Appointment> findSortedByDateDsc();
 
     /**
-     * Find sorted by creator asc collection.
+     * the method "findSortedCreatorAsc" will return a sorted appointment collection by creator ascending
      *
-     * @return the collection
+     * @return sorted appointment collection
      */
     Collection<Appointment> findSortedByCreatorAsc();
 
     /**
-     * Find sorted by creator dsc collection.
+     * the method "findSortedCreatorDsc" will return a sorted appointment collection by creator descending
      *
-     * @return the collection
+     * @return sorted appointment collection
      */
     Collection<Appointment> findSortedByCreatorDsc();
 
     /**
-     * Find sorted by campus location asc collection.
+     * the method "findSortedLocationAsc" will return a sorted appointment collection by location ascending
      *
-     * @return the collection
+     * @return sorted appointment collection
      */
     Collection<Appointment> findSortedByCampusLocationAsc();
 
     /**
-     * Find sorted by campus location dsc collection.
+     * the method "findSortedLocationDsc" will return a sorted appointment collection by location descending
      *
-     * @return the collection
+     * @return sorted appointment collection
      */
     Collection<Appointment> findSortedByCampusLocationDsc();
 

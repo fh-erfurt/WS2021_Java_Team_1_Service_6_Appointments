@@ -2,69 +2,64 @@ package de.fherfurt.appointment.storage.repository;
 
 
 import de.fherfurt.appointment.models.Appointment;
-import de.fherfurt.appointment.models.Person;
 import de.fherfurt.appointment.models.SortCriteriaEnum;
 
 import java.util.List;
 
 /**
- * The interface Appointment repository is abstraction to AppointmentDao to get all functions.
+ * repository to storage appointment objects
+ *
  * @author teichmueller
  */
 public interface AppointmentRepository {
 
-    /**
-     * Gets all appointments.
-     *
-     * @return all appointments
-     */
     List<Appointment> getAllAppointments();
 
     /**
-     * Gets appointment.
+     * gets appointment based on given appointmentId
      *
-     * @param appointmentId the appointment id
-     * @return one appointment with the appointmentId
+     * @param appointmentId id of appointment object
+     * @return one appointment with the given appointmentId
      */
     Appointment getAppointment(Long appointmentId);
 
     /**
-     * Create appointment boolean.
+     * create appointment
      *
-     * @param appointment the appointment
-     * @return the boolean if the creation of appointment is done
+     * @param appointment given appointment
+     * @return true if successful
      */
     boolean createAppointment(Appointment appointment);
 
     /**
-     * Update appointment boolean.
+     * update appointment
      *
-     * @param appointment the appointment
-     * @return the boolean if the Appointment was updated
+     * @param appointment given appointment
+     * @return true if successful
      */
     boolean updateAppointment(Appointment appointment);
 
     /**
-     * Delete appointment boolean.
+     * delete appointment
      *
-     * @param appointmentId the appointment id
-     * @return the boolean if the Appointment was deleted
+     * @param appointmentId given appointmentId
+     * @return true if successful
      */
     boolean deleteAppointment(Long appointmentId);
 
     /**
-     * Gets appointment sorted by.
+     * gets appointment list sorted by given criteria.
      *
-     * @param sortOrder the sort order
-     * @return appointment sorted by
+     * @param sortOrder sort criteria based on {@link de.fherfurt.appointment.models.SortCriteriaEnum}
+     * @return sorted appointment list
      */
-    List<Appointment> getAppointmentSortedBy( SortCriteriaEnum sortOrder );
+    List<Appointment> getAppointmentSortedBy(SortCriteriaEnum sortOrder);
 
     /**
-     * Gets appointment with person.
+     * get appointment list with attending person
      *
-     * @param personId the person id
-     * @return the appointment with person
+     * @param personId id of person attending the appointment
+     * @return filtered appointment list
      */
     List<Appointment> getAppointmentWithPerson(long personId);
 }
