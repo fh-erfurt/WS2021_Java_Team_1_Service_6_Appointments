@@ -1,5 +1,13 @@
 
-# Java 1 Projekt -- Appointments
+# Java Projekt -- Appointments
+<hr>
+
+# Java 1
+<details closed>
+<summery><b>Gesamtübersicht - Java 1</b></summery>
+<br>
+ <br>
+ 
 Im Rahmen des Projektes Java 1 ist den Studierenden des 3. Fachsemesters der Angewandten Informatik die Aufgabe gestellt worden die bis dato bestehende App der Fachhochschule Erfurt, die in der bisherigen Funktionalität und Benutzerfreundlichkeit nicht wenige Wünsche offen lässt, nachzubilden, sowie zu verbessern und ggf. zu erweitern. 
 <br>
 Dafür wurden 2 Teams gebildet, die konkurrierend jeweils ein gemeinsames Projekt erarbeiten.
@@ -47,7 +55,7 @@ Die Studenten wiederrum müssen nach den relevanten Terminen suchen, die erstell
 </details>
  
 <details closed>
-<summary><b>Aufsetzung und Nutzung des Programms</b></font></summary>
+<summary><b>Aufsetzung und Nutzung des Programms</b></summary>
 <br>
 Da der Projektumfang sich zuerst auf die Datenstruktur und Logik des Services beschränkt, existieren sowohl keine reale Datenbank, als auch eine interaktive Benutzeroberfläche jeglicher Art. 
 Die Fähigkeit und die Notwendigkeit einer Aufsetzung des Programms wird Teil von Java 2 sein.
@@ -192,12 +200,165 @@ Die Arbeit am Projekt kann in 3 grundlegende Abschnitte eingeteilt werden:
 * [Github](https://github.com/ "Github") – Versionskontrolle, Projektplanung und Aufgabenverteilung
 * [Discord](https://discord.com/ "Discord") - Kommunikationsmittel
 
+</details>
+
+ </details>
+ 
 
 
+
+# Java 2
+<details closed>
+<summery><b>Gesamtübersicht - Java 2</b></summery>
+<br>
+ <br>
+Im Rahmen des Projektes Java 2 ist den Studierenden des 4. Fachsemesters der Angewandten Informatik die Aufgabe gestellt worden, das zuvor erstellte Projekt aus Java 1 zu erweitern und zu korigieren, in welchem die bis dato bestehende App der Fachhochschule Erfurt die in der bisherigen Funktionalität und Benutzerfreundlichkeit nicht wenige Wünsche offen lässt, nachzubilden, sowie zu verbessern und ggf. zu erweitern.
+<br>
+Einzelne Bestandteile dieses Projekts wurden in sog. Services, 7 insgesamt, aufgeteilt, die jeweils kleineren Gruppen zugewiesen wurden.
+
+Dafür wurde das bestehende Team aus Java 1 beibehalten, die Services wurden allerdings voneinander getrennt, wodurch keine Schnittstellen zu anderen Services mehr benötigt wurden.
+<br>
+
+
+Unsere Gruppe war für den Service Appointments zuständig.
+<br>
+Arbeitskürzel des Serviceteils des Gesamtprojekts:
+## WS2021_Java_Team_1_Service_6_Appointments
+---
+# Allgemeine Projektübersicht
+## Projektteam
+* * Jonas Helmboldt
+* * Stephan Teichmüller
+* * Nadine Hütter
+* * Artur Jadranski
+---
+<br>
+
+
+<details closed>
+<summary><b>Anforderungsbeschreibung</b></summary>
+<br>
+Die bestehende Art und Weise des Terminplans soll in diesem Projekt neu ausgearbeiteten und ersetzt werden. Geplant ist ein allgemeiner Terminplan zum Anzeigen, Erstellen, sowie Bearbeiten von Terminen. Mitarbeiter in der Rolle des Terminerstellers sollen Termine erstellen können und diese veröffentlichen. Darüber hinaus soll bei Erstellung dem Termin eine Auswahl an Studenten zugeordnet werden. Die hier partizipierenden Studenten sollen dann über den Termin mit einer Nachricht informiert werden können. Die Bearbeitung der eigens erstellten Termine soll Fähigkeit des Terminerstellers sein. Ebenso soll nur der Terminersteller einen Termin löschen können.
+<br><br>
+
+Die Studenten wiederrum müssen nach den relevanten Terminen suchen, die erstellten relevanten Termine sehen, diese filtern und sortieren können. Bei Bedarf sollen sie auch über einen Termin bei Veröffentlichung informiert werden.
+<br>
+<hr>
+
+* Benutzer sollen Termine erstellen können
+* Benutzer sollen Termine veröffentlichen können
+* Benutzer sollen Termine bearbeiten können
+* Benutzer sollen Termine löschen können
+* Terminen wird bei Erstellung eine Wiederholrate zugeordnet
+* Terminen wird bei Erstellung ein Veranstaltungsort zugeordnet
+* Terminen wird bei Erstellung bei Bedarf eine Liste an partizipierenden Benutzer zugeordnet
+* Benutzer können sich alle bestehenden relevanten Termine/Veranstaltungen ihrer Fakultät/Fachrichtung anzeigen lassen
+* Benutzer können sich alle relevanten Informationen und Zeiträume ihres Semesters anzeigen lassen
+* Benutzer können Termine nach Datum, Fakultät, Campus und Ersteller sortieren
+* Benutzer können Termine nach Datum, Fakultät, Campus, Ersteller, Terminname filtern
+* Die Daten sollen in einer Datenbank untergespeichert werden
+* Die Funktionalitäten sollen über eine Desktopaplikation zugänglich sein
+  <br>
+
+
+</details>
+
+<details closed>
+<summary><b>Meilensteine</b></summary>
+
+<br>
+ 
+<b>Korrekturphase</b><br>
+<b>Ausbau-/Erweiterungsphase</b><br>
+<b>Finalisierungsphase</b><br>
+
+
+### Korrekturphase
+* Ist-Zustand des bestehenden Projekts durchschauen
+* Überarbeitung und Anpassung des aus Java 1 bestehenden Klassendiagramms
+* Überarbeitung der Herangehensweise an das Projekt im Hinblick auf den Wegfall der benötigten Schnittstellen zu / von anderen Services
+* Streichung / Überarbeitung der bestehenden Interfaces, sowie ihre Funktionalitäten
+* Korrektur Code-Dokumentation und Übersetzung in englische Sprache
+* Anpassung 
+* MAIN-Package: models umbenannt
+* fixed JPA-Import
+* AppointmentInterface - mit zugehörigen Klassen
+  * packages angepasst
+  * umbenannt
+ 
+* sorting + searching in utils package korrigiert
+  * FindBy und SortBy auf static gesetzt
+ 
+* storage package erstellt und befüllt
+
+
+### Ausbau-/Erweiterungsphase
+* Überlegung Ertellung erster Konzepte zu Datenbanktabellen
+* Überlegung Aufbau- Klassen und Datenbanktabellen
+* Händisches Aufzeigen der Beziehungen (Zeichnung) zwischen den möglichen Datenbanktabellen und deren Relationen
+* Größtenteils festlegen der möglichen Datenbanktabellen:
+  Große Liste mit allen Personen, die jeweils in **students** und (*z.B.) **Mitarbeiter** aufgespalten wird. Diese sollen jeweils von Persons ihre Daten erben
+* Eine große Termintabelle soll erstellt werden.
+ Termintabelle soll über eindeutige Bezeichner mit z.B. students oder Mitarbeiter in eine Relation über eine Zwischentabelle zusammengebracht werden.
+ **Students** = Matr.Nr
+ **Mitarbeiter** = z.B. Kürzel
+* erste Tests mit Docker
+* Ausbau POM.xml bezüglich Plugins und dependencies
+* storage- core package
+  * zusätzliche DAOs hinzugefügt
+* Data controller umgeformt zu RepositoryFactory
+  * erweitert um repository-Attribut
+  * erweitert um GET-Methoden im Repository
+* neue Konstruktoren hinzugefügt und bestehende erweitert
+  * siehe RepositoryImpl
+  * DataProvider.createTestData
+* bisherigen storage controller gelöscht
+* Repository hinzugefügt
+  * 1 Interface pro Modellklasse
+  * RepositoryImpl implementiert alle Interfaces
+* Erstellung der Schnittstelle für die Webapplikation
+* base resource package hinzugefügt
+* beschränkt auf 1 Ressource / Modell
+  * mit CRUD Operationen
+  * zusätzliche Interface-Funktionalitäten hinzugefügt
+* request.http via REST implementiert
+* Entfernen bestehender Docker-Komponenten
+
+
+### Finalisierungsphase
+* bugfixing
+* Generierung von Testdaten
+* Finalisierung von unit-Tests
+* Filterung nach Appointment gefixt
+
+
+</details>
+
+
+<details closed>
+<summary><b>Verwendete Programme</b></summary>
+ <br>
+
+* [Intellij](https://www.jetbrains.com/de-de/idea/ "Intellij") - IDE für Java
+* [draw.io](https://draw.io/ " draw.io ") - für Diagramme
+* [SharePoint]( https://www.microsoft.com/de-de/microsoft-365/sharepoint/collaboration " SharePoint ") - vorläufige Dokumentation, Präsentationen & Veranschaulichung, Projektplanung und Aufgabenverteilung
+* [Github](https://github.com/ "Github") – Versionskontrolle, Projektplanung und Aufgabenverteilung
+* [Discord](https://discord.com/ "Discord") - Kommunikationsmittel
+* [Whatsapp](https://www.whatsapp.com/ "Whatsapp") - Kommunikationsmittel
+* [Postman](https://www.postman.com/ "Postman") - API Plattform zum bauen und verwenden von APIs
+* [Docker](https://www.docker.com/ "Docker") - Software zur Isolierung von Anwendungen mit Hilfe von Containervirtualisierung.
+</details>
+
+<details closed>
+<summary>Lessons Learned</summary>
+ 
+* IDEs und Arbeitsumgebungen müssen von Anfang an korrekt funktionieren und zugänglich sein
+* Projektdokumentation muss in Zukunft strikter gehandhabt werden. Nötige Schritte müssen schriftlich festgehalten werden, um Übersicht über das Projekt zu behalten
+ 
+* Erstellung realistischer Meilensteine, die in regelmäßigen Abständen eingebracht werden, muss besser umgesetzt werden.
+* Aufgabenverteilung und -abarbeitung muss basierend auf den Meilensteinen eindeutiger umgesetzt werden. 
 
 
 
 </details>
-<br>
-<hr>
-
+</details>
