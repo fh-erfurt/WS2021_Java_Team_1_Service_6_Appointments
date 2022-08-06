@@ -14,17 +14,6 @@ import org.junit.Test;
 
 public class AppointmentTest {
 
-    private Appointment appointment;
-
-    @Before
-    public void setUp() throws Exception
-    {
-        appointment = new Appointment( Constants.FIRST_APPOINTMENT_NAME,
-                Constants.FIRST_APPOINTMENT_CREATOR, Constants.FIRST_APPOINTMENT_DATE,
-                Constants.FIRST_APPOINTMENT_REPITITON,Constants.FIRST_APPOINTMENT_STREET,
-                Constants.FIRST_APPOINTMENT_ROOM,Constants.FIRST_APPOINTMENT_DESCRIPTION);
-    }
-
 
 
 }

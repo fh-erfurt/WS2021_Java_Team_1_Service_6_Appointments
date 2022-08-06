@@ -88,7 +88,7 @@ public class RepositoryImpl implements PersonRepository, AppointmentRepository{
             if (person == null){
                 return new ArrayList<>();
             }
-            return new ArrayList<>(this.appointmentDao.findWithPerson(person));
+            return new ArrayList<>(this.appointmentDao.findWithPerson(personId));
     }
 
     @Override

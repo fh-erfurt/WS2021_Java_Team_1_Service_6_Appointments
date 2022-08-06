@@ -42,6 +42,15 @@ public class Appointment extends AbstractDatabaseEntity {
     private List<Person> persons;
 
 
+    public boolean hasPerson (long personId) {
+        for( Person p : this.getPersons() ) {
+            if( p.getId() == personId ) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
