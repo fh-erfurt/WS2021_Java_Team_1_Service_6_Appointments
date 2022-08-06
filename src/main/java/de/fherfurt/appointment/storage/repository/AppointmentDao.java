@@ -18,7 +18,7 @@ public interface AppointmentDao extends GenericDao<Appointment> {
      * @param personId the person
      * @return the collection of Appointment
      */
-    Collection<Appointment> findWithPerson(Person person);
+    Collection<Appointment> findWithPerson(long personId);
 
     /**
      * Find sorted by name asc collection.

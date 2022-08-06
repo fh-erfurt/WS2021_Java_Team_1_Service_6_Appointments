@@ -5,7 +5,7 @@ import java.util.Date;
 
 /**
  * The class Abstract database entity define the base of class at database.
- * @creator helmboldt
+ * @author  helmboldt
  */
 
 @Entity
@@ -139,4 +139,5 @@ public abstract class AbstractDatabaseEntity
                 ", modified=" + modified +
                 '}';
     }
+
 }
