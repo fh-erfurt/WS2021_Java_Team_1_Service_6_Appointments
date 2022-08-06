@@ -41,6 +41,13 @@ public class Appointment extends AbstractDatabaseEntity {
     @ManyToMany(cascade = CascadeType.PERSIST)
     private List<Person> persons;
 
+    /**
+     * The method show true if the person is in the personList
+     * @param personId
+     * @return true if found
+     *         else false
+     *
+     */
 
     public boolean hasPerson (long personId) {
         for( Person p : this.getPersons() ) {
