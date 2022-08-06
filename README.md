@@ -70,19 +70,19 @@ Eine Möglichkeit der Interaktion wird ebenfalls Teil von Java 2 werden.
 Hier sind zusammengefasst alle bisher erstellten relevanten Diagramme und Schemata, sowie die vorhergehenden Entwürfe.
 
 ## UC
-![UC](https://raw.githubusercontent.com/fh-erfurt/WS2021_Java_Team_1_Service_6_Appointments/main/doc/documentation/pictures/UC_Terminverwaltung%20-%20v1.png)
+![UC](https://raw.githubusercontent.com/fh-erfurt/WS2021_Java_Team_1_Service_6_Appointments/master/doc/documentation/Java-1/pictures/UC_Terminverwaltung%20-%20v1.png)
 <br>
 Im ersten Entwurf wurde sich auf die notwendigsten Funktionalitäten beschränkt, die für die Realisierung des Gesamtprojekts sinnvoll wären. Eine grundlegende Terminverwaltung, die im vollen Umfang einem erstellenden Mitarbeiter zugeordnet wird, erschien als notwendig. Darüber hinaus war auch Teil des Entwurfsprozesses die Überlegung, dass eine Art rudimentäres Rechtesystem existieren könne. Hier gäbe es die Möglichkeit die Erstellung und sonstige Verwaltung eines Termins explizit nur Mitarbeitern zuzuordnen. Zusätzlich sollte ein Benutzer sich die bestehenden Termine anzeigen lassen können.
 <br>
 ══════════════════════════════════════════════════
 <br><br>
-![UC](https://raw.githubusercontent.com/fh-erfurt/WS2021_Java_Team_1_Service_6_Appointments/main/doc/documentation/pictures/UC_Terminverwaltung%20-%20v2.png)
+![UC](https://raw.githubusercontent.com/fh-erfurt/WS2021_Java_Team_1_Service_6_Appointments/master/doc/documentation/Java-1/pictures/UC_Terminverwaltung%20-%20v2.png)
 <br>
 Im Hinblick auf den Projektumfang und die erarbeiteten Entwürfe anderer Services wurde die Realisierung des Service Appointments mit den hier gezeigten Fähigkeiten realisiert. Grundlegend existieren zwei große Rollen. Ein Benutzer, dies sind Studenten. Sowie Mitarbeiter, zu diesen zählen auch Professoren. Teil der Mitarbeiter sind ebenfalls Terminersteller, die einen Termin erstellen und löschen können. Zudem können Termine angesehen und sortiert/gefiltert werden können. Benutzer können wiederum nur Termine ansehen, jedoch nicht erstellen oder löschen.
 <br>
 ══════════════════════════════════════════════════
 <br><br>
-![UC](https://raw.githubusercontent.com/fh-erfurt/WS2021_Java_Team_1_Service_6_Appointments/main/doc/documentation/pictures/UC%20final.png)
+![UC](https://raw.githubusercontent.com/fh-erfurt/WS2021_Java_Team_1_Service_6_Appointments/master/doc/documentation/Java-1/pictures/UC%20final.png)
 <br>
 Dies ist das finale Use Case des Service Appointments. <br>
 Benutzer und Mitarbeiter sind vorerst über eine gemeinsame, Rolle in ihren Berechtigungen, vereinigt.
@@ -90,14 +90,14 @@ Benutzer und Mitarbeiter sind vorerst über eine gemeinsame, Rolle in ihren Bere
 ══════════════════════════════════════════════════
 <br><br>
 ## UML 
-![UC](https://raw.githubusercontent.com/fh-erfurt/WS2021_Java_Team_1_Service_6_Appointments/main/doc/documentation/pictures/UML%20-%201.png)
+![UC](https://raw.githubusercontent.com/fh-erfurt/WS2021_Java_Team_1_Service_6_Appointments/master/doc/documentation/Java-1/pictures/UML%20-%201.png)
 <br>
 Dies ist der Erste Entwurf einer Prüfungsan- und abmeldung.
 <br>
 ══════════════════════════════════════════════════
 <br><br>
 
-![UC]( https://raw.githubusercontent.com/fh-erfurt/WS2021_Java_Team_1_Service_6_Appointments/main/doc/documentation/pictures/UML%20-%202.png)
+![UC](https://raw.githubusercontent.com/fh-erfurt/WS2021_Java_Team_1_Service_6_Appointments/master/doc/documentation/Java-1/pictures/UML%20-%202.png)
 <br>
 Erste Überlegung zu Eingrenzung der Termine u.a. mit Studienganginformationen.
 <br>
@@ -105,14 +105,14 @@ Erste Überlegung zu Eingrenzung der Termine u.a. mit Studienganginformationen.
 <br><br>
 
 ## Klassenmodelle
-![CLASS](https://raw.githubusercontent.com/fh-erfurt/WS2021_Java_Team_1_Service_6_Appointments/main/doc/documentation/pictures/Klassenmodell%20-%20Entwurf.png)
+![CLASS](https://raw.githubusercontent.com/fh-erfurt/WS2021_Java_Team_1_Service_6_Appointments/master/doc/documentation/Java-1/pictures/Klassenmodell%20-%20Entwurf.png)
 <br>
 Dies ist der ausgearbeitete Entwurf des Klassenmodells mit den zu implementierenden Funktionen und Klassen. 
 <br>
 ══════════════════════════════════════════════════
 <br><br>
 
-![CLASS](https://raw.githubusercontent.com/fh-erfurt/WS2021_Java_Team_1_Service_6_Appointments/main/doc/documentation/pictures/expected%20from%20persons.png)
+![CLASS](https://raw.githubusercontent.com/fh-erfurt/WS2021_Java_Team_1_Service_6_Appointments/master/doc/documentation/Java-1/pictures/expected%20from%20persons.png)
 <br>
 Hier wird beschreiben, welche relevanten Informationen unser Service Appointments vom Service Persons entgegennehmen soll. Da dies ein Entwurf ist und nicht final, haben wir uns auf die Realisierung unseres Services auf grundlegendste und relevanteste Informationen begrenzt.
 <br>
@@ -120,7 +120,7 @@ Hier wird beschreiben, welche relevanten Informationen unser Service Appointment
 <br><br>
 
 
-![CLASS](https://raw.githubusercontent.com/fh-erfurt/WS2021_Java_Team_1_Service_6_Appointments/main/doc/documentation/pictures/Klassenmodell%20-%20final.png)
+![CLASS](https://raw.githubusercontent.com/fh-erfurt/WS2021_Java_Team_1_Service_6_Appointments/master/doc/documentation/Java-1/pictures/Klassenmodell%20-%20final.png)
 <br>
 Das hier vorliegende Klassenmodell entspricht der finalen Form.
 <br>
